@@ -1,0 +1,342 @@
+var versionHienTai = "2.2" //LƯU Ý: Khi đổi dữ liệu cần cập nhật version
+
+var data = [
+    {
+        id: 1,
+        img: "imgs/ảnh-sản-phẩm/sp1-2.jpg",
+        title: "Du lịch Sapa: Thành phố sương mù của Việt Nam",
+        address: "TP.HCM",
+        starDay: "30/04/2022",
+        price: "2.199.000 VND"
+    },
+    {
+        id: 2,
+        img: "imgs/ảnh-sản-phẩm/sp4.jpg",
+        title: "Du lịch Phan Thiết: Combo Centara Mirage Resort 5* Mũi Né",
+        address: "TP.HCM, Hà Nội",
+        starDay: "10/08/2022",
+        price: "2.689.000 VND"
+    },
+    {
+        id: 3,
+        img: "imgs/ảnh-sản-phẩm/TN-Đà Lạt2.jpg",
+        title: "Du lịch Đà Lạt: Thành phố mộng mơ - Thiên đường nghỉ dưỡng",
+        address: "TP.HCM",
+        starDay: "02/09/2022",
+        price: "4.689.000 VND"
+    },
+    {
+        id: 4,
+        img: "imgs/ảnh-sản-phẩm/sp5.jpg",
+        title: " Du Lịch Tây Nguyên: Buôn Ma Thuột - Pleiku - Bảo Tàng Thế Giới Cà Phê - Thác Phú Cường",
+        address: "TP.HCM, Hà Nội",
+        starDay: "15/06/2022",
+        price: "3.689.000 VND"
+    },
+    {
+        id: 5,
+        img: "imgs/ảnh-sản-phẩm/sp6.jpg",
+        title: "Du Lịch Phú Quốc: Combo Intercontinental Resort 5* Phú Quốc. 3 ngày 2 đêm.",
+        address: "TP.HCM, Hà Nội",
+        starDay: "10/03/2022",
+        price: "6.199.000 VND"
+    },
+    {
+        id: 6,
+        img: "imgs/ảnh-sản-phẩm/sp3.jpg",
+        title: "Du Lịch Miền Bắc: Hà Nội - Sapa - Fansipan - Thị Trấn Mờ Sương Sapa",
+        address: "Thành phố Hồ Chí Minh - Đà Nắng",
+        starDay: "30/04/2022",
+        price: "5.199.000 VND"
+    }
+]
+
+var dataTrongNuoc = [
+    {
+        id: 1,
+        img: "imgs/ảnh-sản-phẩm/TN-Đà Lạt2.jpg",
+        title: "Du Lịch Đà Lạt: Combo Đặc Biệt dành cho dịp lễ tại Đà Lạt - Lễ 02/09 + Vé Máy Bay Khứ Hồi",
+        address: "Thành phố Hồ Chí Minh - Hà Nội",
+        starDay: "02/09/2022",
+        price: "7.899.000 VND"
+    },
+    {
+        id: 2,
+        img: "imgs/ảnh-sản-phẩm/sp4.jpg",
+        title: "Du Lịch Phan Thiết: Combo Centara Mirage Resort 5* Mũi Né",
+        address: "Thành phố Hồ Chí Minh",
+        starDay: "10/08/2022",
+        price: "2.689.000 VND"
+    },
+    {
+        id: 3,
+        img: "imgs/ảnh-sản-phẩm/TN2.jpg",
+        title: " Du lịch biển (Bà Rịa - Vũng Tàu) - Combo trọn gói (vé khứ hồi - khách sạn)",
+        address: "Hà Nội - Đà Nẵng - Hải Phòng",
+        starDay: "30/04/2022",
+        price: "3.709.000 VND"
+    },
+    {
+        id: 4,
+        img: "imgs/ảnh-sản-phẩm/TN1.jpg",
+        title: "Tham quan Tây Ninh - Đất thánh địa của Miền Nam - Núi Bà Đen - Chùa Tòa Thánh",
+        address: "Hà Nội - Hải Phòng",
+        starDay: "30/04/2022",
+        price: "3.999.000 VND"
+    },
+    {
+        id: 5,
+        img: "imgs/ảnh-sản-phẩm/sp5.jpg",
+        title: "Du Lịch Tây Nguyên: Buôn Ma Thuột - Pleiku - Bảo Tàng Thế Giới Cà Phê - Thác Phú Cường",
+        address: "Hà Nội - Thành phố Hồ Chí Minh",
+        starDay: "30/04/2022",
+        price: "2.509.000 VND"
+    },
+    {
+        id: 6,
+        img: "imgs/ảnh-sản-phẩm/sp1.jpg",
+        title: " Du lịch Sapa: Combo trọn gói 3 ngày 2 đêm.",
+        address: "Thành phố Hồ Chí Minh",
+        starDay: "30/04/2022",
+        price: "6.689.000 VND"
+    }
+
+]
+
+var dataNuocNgoai = [
+    {
+        id: 1,
+        img: "imgs/ảnh-sản-phẩm/NN1.jfif",
+        title: "Du lịch Singapo: Combo trọn gói, vé khứ hồi, 5 ngày 4 đêm.",
+        address: "Thành phố Hồ Chí Minh (Hộ Chiếu)",
+        starDay: "30/04/2022",
+        price: "8.199.000 VND"
+    },
+    {
+        id: 2,
+        img: "imgs/ảnh-sản-phẩm/NN2.jpg",
+        title: "Du lịch Anh Quốc: Combo trọn gói, vé khứ hồi, khách sạn 5 sao, 7 ngày 6 đêm",
+        address: "Thành phố Hồ Chí Minh (Hộ Chiếu)",
+        starDay: "30/04/2022",
+        price: "10.399.000 VND"
+    },
+    {
+        id: 3,
+        img: "imgs/ảnh-sản-phẩm/NN3.jpg",
+        title: "Du lịch Thái Lan: Quốc gia chùa vàng - 3 ngày 2 đêm - Khách sạn 5 sao",
+        address: "Thành phố Hồ Chí Minh (Hộ Chiếu)",
+        starDay: "30/04/2022",
+        price: "4.199.000 VND"
+    },
+    {
+        id: 4,
+        img: "imgs/ảnh-sản-phẩm/NN4.jpg",
+        title: "Du lịch Hàn Quốc - Xứ sở kim chi - Combo vé khứ hồi, 4 ngày 3 đêm, khách sạn chuẩn 5 sao.",
+        address: "Thành phố Hồ Chí Minh (Hộ Chiếu)",
+        starDay: "30/04/2022",
+        price: "6.199.000 VND"
+    },
+    {
+        id: 5,
+        img: "imgs/ảnh-sản-phẩm/NN5.jpg",
+        title: "Du lịch Nhật Bản - Xứ sở hoa anh đào: Combo trọn gói 3 ngày 2 đêm.",
+        address: "Thành phố Hồ Chí Minh (Hộ Chiếu)",
+        starDay: "30/04/2022",
+        price: "5.899.000 VND"
+    },
+    {
+        id: 6,
+        img: "imgs/ảnh-sản-phẩm/NN6.jpg",
+        title: "Du lịch Hoa Kì: Combo trọn gói 6 ngày 5 đêm - Khách sạn 5 sao",
+        address: "Thành phố Hồ Chí Minh (Hộ Chiếu)",
+        starDay: "30/04/2022",
+        price: "15.199.000 VND"
+    }
+]
+
+
+
+function loadDataToLocalStore(id) {
+    var versionStored = localStorage.getItem("versionStored");
+
+    // nếu chưa lưu version thì mặc định là versionHienTai
+    if (!versionStored) {
+        versionStored = versionHienTai; //Đã cài đặt mặc định
+        localStorage.setItem("versionStored", versionStored);
+    }
+
+    if (versionStored !== versionHienTai) {
+        localStorage.removeItem("dataStored");
+    }
+
+    var dataDaLuu = localStorage.getItem("dataStored");
+
+    if (!dataDaLuu) {
+        //Data là một object/ array JavaScript
+        // Chuyển Data thành chuỗi String
+
+        var dataString = JSON.stringify(data);
+        var dataTN = JSON.stringify(dataTrongNuoc);
+        var dataNN = JSON.stringify(dataNuocNgoai);
+
+        localStorage.setItem("dataStored", dataString);
+        localStorage.setItem("dataTN", dataTN);
+        localStorage.setItem("dataNN", dataNN);
+
+    }
+
+    localStorage.setItem("versionStored", versionHienTai);
+}
+
+function xuLyHienThiDULieu() {
+    var tourHTML = '';
+    var tourTN = '';
+    var tourNN = '';
+
+    for (var  i = 0;  i < data.length;  i++) {
+        const item = data[i];
+        
+        
+        var dataHTML = `
+                            <div class="col-30">
+                                <div class="product-items">
+                                    <div class="img-SanPham">
+                                        <a href="#">
+                                            <img src="${item.img}" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="info-SanPham">
+                                        <div class="logoHot">
+                                            <img src="imgs/hot.png" alt="ảnh chữ hot">
+                                        </div>
+                                        <a href="#">
+                                            <p>${item.title}</p>
+                                        </a>
+                                        <div class="location">
+                                            <i class="far fa-flag"></i>
+                                            <span>Địa điểm khơi hành: ${item.address}</span>
+                                        </div>
+                                        <div class="starDay">
+                                            <i class="far fa-clock"></i>
+                                            <span>${item.starDay}</span>
+                                        </div>
+                                    </div>
+                                    <div class="footer-product">
+                                        <div class="price">
+                                            <i class="fas fa-money-bill-alt"></i>
+                                            <span>${item.price}</span>
+                                        </div>
+                                        <input class="btn" type="button" value="Đặt ngay">
+                                    </div>
+                                </div>
+                            </div>`;
+        tourHTML = tourHTML + dataHTML;
+    }
+
+    $(`#SanPhamHOT-items`).prepend(tourHTML);
+
+    for (var index = 0; index < dataTrongNuoc.length; index++) {
+        const itemTN = dataTrongNuoc[index];
+        
+        var DaTaTN = `
+                        <div class="col-30">
+                            <div class="product-items">
+                                <div class="img-SanPham">
+                                    <a href="#">
+                                        <img src="${itemTN.img}" alt="">
+                                    </a>
+                                </div>
+                                <div class="info-SanPham">
+                                    <a href="#">
+                                        <p>${itemTN.title}</p>
+                                    </a>
+                                    <div class="location">
+                                        <i class="far fa-flag"></i>
+                                        <span>Địa điểm khơi hành: ${itemTN.address}</span>
+                                    </div>
+                                    <div class="starDay">
+                                        <i class="far fa-clock"></i>
+                                        <span>${itemTN.starDay}</span>
+                                    </div>
+                                </div>
+                                <div class="footer-product">
+                                    <div class="price">
+                                        <i class="fas fa-money-bill-alt"></i>
+                                        <span>${itemTN.price}</span>
+                                    </div>
+                                    <input class="btn" type="button" value="Đặt ngay">
+                                </div>
+                            </div>
+                        </div> `
+        tourTN = tourTN + DaTaTN;
+    }
+
+    $("#SanPhamTrongNuoc").prepend(tourTN);
+
+    for (var i = 0; i < dataNuocNgoai.length; i++) {
+        const itemNN = dataNuocNgoai[i];
+
+        var DaTaNN = `<div class="col-30">
+                        <div class="product-items">
+                            <div class="img-SanPham">
+                                <a href="#">
+                                    <img src="${itemNN.img}" alt="">
+                                </a>
+                            </div>
+                            <div class="info-SanPham">
+                                <a href="#">
+                                    <p>${itemNN.title}</p>
+                                </a>
+                                <div class="location">
+                                    <i class="far fa-flag"></i>
+                                    <span>Địa điểm khơi hành: ${itemNN.address}</span>
+                                </div>
+                                <div class="starDay">
+                                    <i class="far fa-clock"></i>
+                                    <span>${itemNN.starDay}</span>
+                                </div>
+                            </div>
+                            <div class="footer-product">
+                                <div class="price">
+                                    <i class="fas fa-money-bill-alt"></i>
+                                    <span>${itemNN.price}</span>
+                                </div>
+                                <input class="btn" type="button" value="Đặt ngay">
+                            </div>
+                        </div>
+                    </div> `;
+        tourNN = tourNN + DaTaNN;
+    }
+    $("#SanPhamNuocNgoai").prepend(tourNN);
+}
+
+
+        
+  
+
+
+function truotVeTrangDau() {
+    $("#GoToTop").hide()
+
+    $(window).scroll(function () {
+
+        if ($(this).scrollTop() >= 400)
+            $("#GoToTop").show("slow")
+        else
+            $("#GoToTop").hide("slow")
+    })
+
+    $("#GoToTop").click(function () {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 1500);
+    })
+}
+
+
+$(document).ready(function () {
+
+    truotVeTrangDau();
+    loadDataToLocalStore();
+    xuLyHienThiDULieu();
+})
