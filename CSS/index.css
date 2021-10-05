@@ -390,15 +390,15 @@ ul.ads i:hover {
 
 .location i,
 .location span,
-.starDay i,
-.starDay span {
+.startDay i,
+.startDay span {
     font-size: 2rem;
     padding: 10px 0;
     font-weight: 400;
 }
 
 .location i,
-.starDay i {
+.startDay i {
     margin-right: 10px;
 }
 

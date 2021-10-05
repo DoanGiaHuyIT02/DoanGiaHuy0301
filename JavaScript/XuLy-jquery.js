@@ -1,4 +1,4 @@
-var versionHienTai = "2.7" //LƯU Ý: Khi đổi dữ liệu cần cập nhật version
+var versionHienTai = "2.8" //LƯU Ý: Khi đổi dữ liệu cần cập nhật version
 
 var data = [
     {
@@ -301,7 +301,7 @@ function xuLyHienThiDULieu() {
                                     <i class="far fa-flag"></i>
                                     <span>Địa điểm khơi hành: ${itemNN.address}</span>
                                 </div>
-                                <div class="starDay">
+                                <div class="startDay">
                                     <i class="far fa-clock"></i>
                                     <span>${itemNN.startDay}</span>
                                 </div>
