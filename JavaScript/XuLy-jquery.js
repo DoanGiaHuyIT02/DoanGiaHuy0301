@@ -353,12 +353,12 @@ function truotDenCacSection() {
     })
     $("#TOURTrongNuoc").click(function () {
         $("html, body").animate({
-            scrollTop: 2320
+            scrollTop: 2280
         }, 1000)
     })
     $("#TOURNuocNgoai").click(function () {
         $("html, body").animate({
-            scrollTop: 3500
+            scrollTop: 3460
         }, 1000)
     })
 
