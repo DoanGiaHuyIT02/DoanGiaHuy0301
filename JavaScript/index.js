@@ -47,3 +47,14 @@ function inc(el, steps, max, type) {
         }
     }, 100)
 }
+
+//Phần chuyển đổi ảnh
+function init() {
+    var imgs = document.querySelectorAll("div.TripInfo-img-items img")
+    for (var i = 0; i < imgs.length; i++)
+        imgs[i].onclick = function() {
+            var path = this.src;
+            var img = document.getElementById("mainImg");
+            img.setAttribute("src", path)
+        }
+}
