@@ -324,7 +324,7 @@ function xuLyHienThiDULieu() {
         
   
 
-
+// Phần xử lý js trượt về đầu trang
 function truotVeTrangDau() {
     $("#GoToTop").hide()
 
@@ -343,7 +343,7 @@ function truotVeTrangDau() {
     })
 }
 
-
+// Phần trượt đến các section
 function truotDenCacSection() {
 
     $("#TOURHOT").click(function () {
