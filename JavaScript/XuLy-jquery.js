@@ -1,4 +1,4 @@
-var versionHienTai = "2.8" //LƯU Ý: Khi đổi dữ liệu cần cập nhật version
+var versionHienTai = "2.9" //LƯU Ý: Khi đổi dữ liệu cần cập nhật version
 
 var data = [
     {
@@ -353,12 +353,12 @@ function truotDenCacSection() {
     })
     $("#TOURTrongNuoc").click(function () {
         $("html, body").animate({
-            scrollTop: 2220
+            scrollTop: 2320
         }, 1000)
     })
     $("#TOURNuocNgoai").click(function () {
         $("html, body").animate({
-            scrollTop: 3350
+            scrollTop: 3500
         }, 1000)
     })
 
