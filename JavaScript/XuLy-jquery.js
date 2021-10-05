@@ -1,4 +1,4 @@
-var versionHienTai = "2.3" //LƯU Ý: Khi đổi dữ liệu cần cập nhật version
+var versionHienTai = "2.4" //LƯU Ý: Khi đổi dữ liệu cần cập nhật version
 
 var data = [
     {
@@ -334,10 +334,32 @@ function truotVeTrangDau() {
 }
 
 
+function truotDenCacSection() {
+
+    $("#TOURHOT").click(function () {
+        $("html, body").animate({
+            scrollTop: 1120
+        }, 1000)
+    })
+    $("#TOURTrongNuoc").click(function () {
+        $("html, body").animate({
+            scrollTop: 2220
+        }, 1000)
+    })
+    $("#TOURNuocNgoai").click(function () {
+        $("html, body").animate({
+            scrollTop: 3350
+        }, 1000)
+    })
+
+
+}
+
 
 $(document).ready(function () {
 
     truotVeTrangDau();
+    truotDenCacSection();
     loadDataToLocalStore();
     xuLyHienThiDULieu();
 })
