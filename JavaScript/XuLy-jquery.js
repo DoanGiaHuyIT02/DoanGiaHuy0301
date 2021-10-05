@@ -1,4 +1,4 @@
-var versionHienTai = "2.6" //LƯU Ý: Khi đổi dữ liệu cần cập nhật version
+var versionHienTai = "2.7" //LƯU Ý: Khi đổi dữ liệu cần cập nhật version
 
 var data = [
     {
@@ -169,15 +169,10 @@ function loadDataToLocalStore(id) {
 
     if (versionStored !== versionHienTai) {
         localStorage.removeItem("dataStored");
-    }
-
-    if (versionStored !== versionHienTai) {
         localStorage.removeItem("dataTN");
-    }
-
-    if (versionStored !== versionHienTai) {
         localStorage.removeItem("dataNN");
     }
+
 
     var dataDaLuu = localStorage.getItem("dataStored");
     var dataDaLuuTN = localStorage.getItem("dataTN");
