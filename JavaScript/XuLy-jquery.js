@@ -1,4 +1,4 @@
-var versionHienTai = "2.4" //LƯU Ý: Khi đổi dữ liệu cần cập nhật version
+var versionHienTai = "2.6" //LƯU Ý: Khi đổi dữ liệu cần cập nhật version
 
 var data = [
     {
@@ -156,6 +156,8 @@ var dataNuocNgoai = [
 
 
 
+
+
 function loadDataToLocalStore(id) {
     var versionStored = localStorage.getItem("versionStored");
 
@@ -169,20 +171,33 @@ function loadDataToLocalStore(id) {
         localStorage.removeItem("dataStored");
     }
 
+    if (versionStored !== versionHienTai) {
+        localStorage.removeItem("dataTN");
+    }
+
+    if (versionStored !== versionHienTai) {
+        localStorage.removeItem("dataNN");
+    }
+
     var dataDaLuu = localStorage.getItem("dataStored");
+    var dataDaLuuTN = localStorage.getItem("dataTN");
+    var dataDaLuuNN = localStorage.getItem("dataNN");
 
     if (!dataDaLuu) {
         //Data là một object/ array JavaScript
         // Chuyển Data thành chuỗi String
-
         var dataString = JSON.stringify(data);
-        var dataTN = JSON.stringify(dataTrongNuoc);
-        var dataNN = JSON.stringify(dataNuocNgoai);
-
         localStorage.setItem("dataStored", dataString);
-        localStorage.setItem("dataTN", dataTN);
-        localStorage.setItem("dataNN", dataNN);
+    }
 
+    if (!dataDaLuuTN) {
+        var dataTN = JSON.stringify(dataTrongNuoc);
+        localStorage.setItem("dataTN", dataTN);
+    }
+
+    if (!dataDaLuuNN) {
+        var dataNN = JSON.stringify(dataNuocNgoai);
+        localStorage.setItem("dataNN", dataNN);
     }
 
     localStorage.setItem("versionStored", versionHienTai);
