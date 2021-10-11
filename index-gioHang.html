@@ -167,7 +167,7 @@
                         </div>
                         <form>
                             <div class="total">
-                                <span>Tổng tiền: <span id="total1">3.199.000 VND</span></span>
+                                <span>Tổng tiền: <span id="total1" class="total-item2">3.199.000 VND</span></span>
                             </div>
                             <div class="formInfo">
                                 <label>Họ và tên</label>
@@ -241,8 +241,8 @@
                                                         <input type="number" min="1" max="" value="1" id="soLuongKhach" onclick="tinhTien()">
                                                     </div>
                                                 </td>
-                                                <td >x 3.199.000 = </td>
-                                                <td><span class="total-item" id="total-item">3.199.000 VND</span></td>
+                                                <td id="price-multiplier">x 3.199.000 = </td>
+                                                <td><span class="total-item total-item2" id="total-item">3.199.000 VND</span></td>
                                             </tr>
                                             <tr>
                                                 <td>Trẻ em (dưới 12 tuổi)</td>
@@ -259,7 +259,7 @@
                                 </div>
                                 <div class="TotalAll">
                                     <span>Tổng</span>
-                                    <strong id="total">3.199.000 VND</strong>
+                                    <strong id="total" class="total-item2">3.199.000 VND</strong>
                                 </div>
                             </div>
                         </div>
@@ -327,6 +327,6 @@
    
     <script src="JavaScript/XuLy-jquery.js"></script>
     <script src="JavaScript/index.js"></script>
-   
+   <script src="JavaScript/jquery-gioHang.js"></script>
 </body>
 </html>
