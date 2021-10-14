@@ -411,7 +411,7 @@ function xuLyHienThiDULieu() {
                             <div class="col-30">
                                 <div class="product-items">
                                     <div class="img-SanPham">
-                                        <a href="#">
+                                        <a class="titleClick" onclick="chiTietClick(${item.id}, 1)">
                                             <img src="${item.img}" alt="">
                                         </a>
                                     </div>
@@ -419,7 +419,7 @@ function xuLyHienThiDULieu() {
                                         <div class="logoHot">
                                             <img src="imgs/hot.png" alt="ảnh chữ hot">
                                         </div>
-                                        <a href="#">
+                                        <a class="titleClick" onclick="chiTietClick(${item.id}, 1)">
                                             <p>${item.title}</p>
                                         </a>
                                         <div class="location">
@@ -452,12 +452,12 @@ function xuLyHienThiDULieu() {
                         <div class="col-30">
                             <div class="product-items">
                                 <div class="img-SanPham">
-                                    <a href="#">
+                                    <a class="titleClick" onclick="chiTietClick(${itemTN.id}, 2)">
                                         <img src="${itemTN.img}" alt="">
                                     </a>
                                 </div>
                                 <div class="info-SanPham">
-                                    <a href="#">
+                                    <a class="titleClick" onclick="chiTietClick(${itemTN.id}, 2)">
                                         <p>${itemTN.title}</p>
                                     </a>
                                     <div class="location">
@@ -489,12 +489,12 @@ function xuLyHienThiDULieu() {
         var DaTaNN = `<div class="col-30">
                         <div class="product-items">
                             <div class="img-SanPham">
-                                <a href="#">
+                                <a class="titleClick" onclick="chiTietClick(${itemNN.id}, 3)">
                                     <img src="${itemNN.img}" alt="">
                                 </a>
                             </div>
                             <div class="info-SanPham">
-                                <a href="#">
+                                <a class="titleClick" onclick="chiTietClick(${itemNN.id}, 3)">
                                     <p>${itemNN.title}</p>
                                 </a>
                                 <div class="location">
@@ -570,6 +570,10 @@ function langNgheHamClick() {
     $(document).on("click", ".btn", function (e) {
 
     })
+
+    $(document).on("click", ".titleClick", function (e) {
+
+    })
 }
 
 function datNgayClick(id, loai) {
@@ -581,6 +585,10 @@ function datNgayClick(id, loai) {
 
     // window.location.href = "/index-gioHang.html?id=" + id;
     window.location.href = `/index-gioHang.html?id=${id}&loai=${loai}`;
+}
+
+function chiTietClick(id, loai) {
+    window.location.href = `/index-ChiTietChuyenDi.html?id=${id}&loai=${loai}`;
 }
 
 

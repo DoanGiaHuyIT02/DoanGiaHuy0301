@@ -245,3 +245,115 @@ $(document).ready(function() {
     layThongTinDuLich();
     tinhTien();
 })
+
+// Phần xử lý nhập thông tin đặt chuyến đi
+function Validator(options) {
+
+    var selectorRules = {};
+
+    // Hàm hiện lỗi khi có lỗi
+    function validate_error(inputElement, rule) {
+        var LoiCanHienThi = inputElement.parentElement.querySelector('.error')
+        var LoiTin;      
+       
+       
+        // Lấy ra các rule
+        var rules = selectorRules[rule.selector];
+
+
+        // Lập qua từng rule
+        for (var i = 0; i < rules.length; ++i) {
+            LoiTin = rules[i](inputElement.value);
+            if (LoiTin) break;
+        }
+        
+        if (LoiTin) {
+            LoiCanHienThi.innerText = LoiTin;
+        } else {
+            LoiCanHienThi.innerText = '';
+        }
+
+    }
+
+    // Lấy toàn bộ form
+    var formElement = document.querySelector(options.form);
+    if (formElement) {
+
+        // Xử lý lặp rule
+        options.rules.forEach(function (rule) {
+
+            // Lưu lại các rule
+            if (Array.isArray(selectorRules[rule.selector])) {
+                selectorRules[rule.selector].push(rule.test);
+            } else {
+                selectorRules[rule.selector] = [rule.test];
+            }
+            
+
+
+            // Lấy được giá trị người dùng nhập vào qua inputElement.value
+            var inputElement = formElement.querySelector(rule.selector);
+            var errorSpan = inputElement.parentElement.querySelector(options.errorSelector);
+            
+            if (inputElement) {
+                // khi người dùng không nhập dữ liệu
+                inputElement.onblur = function () {
+                    validate_error(inputElement, rule);
+                }
+
+                // Khi người dùng nhập dữ liệu
+                inputElement.oninput = function () {
+                    errorSpan.innerText = '';
+                }
+            }
+        });
+
+    }
+}
+
+
+
+// Định nghĩa các rules
+// Khi có lỗi thì báo cho người dùng lỗi
+// Không có lỗi thì bình thường
+Validator.isRequired = function(selector, message) {
+    return {
+        selector: selector,
+        test: function (value) {
+            // trim() : loại bỏ các dấu cách hay khoảng trắng đầu dòng
+            return value.trim() ? undefined : message || 'Vui lòng nhập thông tin này'
+        }
+    };
+}
+
+
+// Biểu thức kiểm tra email: var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+Validator.isEmail = function(selector, message) {
+    return {
+        selector: selector,
+        test: function (value) {
+            var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            return regex.test(value) ? undefined : message || 'Vui lòng nhập đúng email'
+        }
+    };
+}
+
+// Biểu thức kiểm tra số điện thoại: var vnf_regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
+Validator.isNumber = function(selector, message) {
+    return {
+        selector: selector,
+        test: function (value) {
+            var vnf_regex = /((01|02|03|04|05|06|07|08|09)+([0-9]{8})\b)/g;
+            return vnf_regex.test(value) ? undefined : message || 'Vui lòng nhập đúng số điện thoại'
+        }
+    };
+}
+
+Validator.isAddress = function(selector, message) {
+    return {
+        selector: selector,
+        test: function (value) {
+            return value.trim() ? undefined : message || 'Vui lòng nhập địa chỉ'
+        }
+    };
+}

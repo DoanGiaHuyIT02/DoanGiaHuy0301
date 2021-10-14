@@ -160,7 +160,7 @@
         <div class="container">
             <div class="row-information">
                 <div class="col30">
-                    <div class="form">
+                    <div class="form" id="form-1">
                         <div class="form-title">
                             <i class="fas fa-user"></i>
                             <h2>Thông tin khách hàng</h2>
@@ -328,5 +328,22 @@
     <script src="JavaScript/XuLy-jquery.js"></script>
     <script src="JavaScript/index.js"></script>
    <script src="JavaScript/jquery-gioHang.js"></script>
+   <script>
+    Validator({
+        // đặt phần form của mình
+        form: '#form-1', 
+        formgroup: '.formInfo',
+        // Đặt phần lỗi
+
+        rules: [
+            Validator.isRequired('#fullName'),
+            Validator.isRequired('#phoneNumber'),
+            Validator.isNumber('#phoneNumber'),
+            Validator.isRequired('#email'),
+            Validator.isEmail('#email'),
+            Validator.isAddress('#address')
+        ]
+    })
+</script>
 </body>
 </html>
