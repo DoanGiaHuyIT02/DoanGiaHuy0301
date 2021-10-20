@@ -1,0 +1,657 @@
+@media (min-width: 359px) and (max-width: 500px) {
+    .nar-bar-btn {
+        padding: 20px !important;
+        display: block;
+        margin: auto 0 auto 90% !important;
+    }
+
+    .row {
+        margin: 0 !important;
+    }
+    /* Xử lý phần trượt */
+    a#GoToTop {
+        padding: 15px 10px;
+    }
+    
+    a#GoToTop i {
+        font-size: 1.6rem;
+    }
+
+    /* Phần xử lý nav top */
+    div.container {
+        margin-left: 10px;
+    }
+
+    .container1 {
+        margin: 0 20px !important;
+    }
+
+    ul.nav-top__social,
+    div.column {
+        display: block;
+    }
+
+    ul.nav-top__social-mob {
+        display: flex;
+    }
+
+    ul.nav-top__social > li p,
+    ul.nav-top__social > li a {
+        display: block;
+        font-size: 1.4rem;
+        padding: 0;
+    }
+
+    /* Kết thúc nav top */
+
+    /* Phần mạng xã hội */
+    .ads > li > a > i {
+        font-size: 1.8rem;
+        padding: 10px 10px;
+    }
+    /* Kết thúc phần mạng xã hội */
+
+    .nar-bar-btn {
+        display: block;
+        padding: 10px;
+    }
+
+    div.col-10 > img {
+        display: none;
+    }
+
+    .nav-Bar-items {
+        display: none;
+    }
+
+   
+
+    .nar-bar-btn {
+        padding: 20px;
+        display: block;
+        margin: auto 0 auto 95%;
+    }
+
+    div.col-10  {
+        margin: 0;
+    }
+
+    .col-90 {
+        display: none;
+    }
+
+    .nav-overlay {
+        z-index: 99999;
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    
+    .col-90-tablet {
+        display: block;
+        z-index: 999999;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 270px;
+        max-width: 100%;
+        background-color: rgb(160, 156, 156);
+        transform: translateX(100%);
+        transition: transform linear 0.2s;
+    }
+
+    .nav-Bar-items-tablet {
+        padding-top: 50px;
+    }
+
+    .nav-Bar-items-tablet > li {
+        display: block;
+        padding: 10px 0 10px 30px ;
+    }
+
+    .nav-Bar-items-tablet > li > a {
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: bold;
+        color: var(--nav-color);
+    }
+
+    /* Xử lý phần menu con trong menu */
+    .travel-tablet,
+    .hotel-tablet {
+        display: none;
+    }
+
+    .hotel-tablet > .hotel-items-tablet,
+    .travel-items-tablet {
+        margin-left: 30px;
+    }
+
+    .hotel-items-tablet > ul > li,
+    .travel-items-tablet > ul > li {
+        margin-top: 10px;
+        padding: 5px 0;
+    }
+
+    .travel-items-tablet > ul > li > a,
+    .hotel-items-tablet > ul > li > a {
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: bold;
+        color: var(--nav-color);
+    }
+
+    .travel-items-tablet > ul > li > a:hover,
+    .hotel-items-tablet > ul > li > a:hover {
+        color: white;
+    }
+
+    .nav-Bar-items-tablet > li a:hover {
+        color: white;
+    }
+
+    li.travel-main-tablet:hover div.travel-tablet,
+    li.hotel-main-tablet:hover div.hotel-tablet {
+        display: block;
+    }
+
+    .footer-product > div.price {
+        font-size: 1.4rem;
+        padding: 12px;
+    }
+
+    .info-SanPham > a > p {
+        margin: 20px 0 10px 0;
+        color: var(--text-color);
+        font-size: 1.6rem;
+        line-height: 2rem;
+        font-weight: 600;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+
+    /* Xử lý icon */
+    .btnDelete-icon {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+    }
+
+    .btnDelete-icon i {
+        font-size: 1.8rem;
+        color: white;
+    }
+
+    /* Xử lý ẩn hiện */
+    .check__input:checked ~ .nav-overlay {
+        display: block;
+    }
+
+    .check__input:checked ~ .col-90-tablet {
+        transform: translateX(0%);
+    }
+
+    .Tour-items {
+        display: none;
+    }
+
+    /* Xử lý phần sản phẩm */
+
+    .row-SanPhamHot > div.col-30 {
+        width: 100%;
+        margin: 20px 20px;
+    }
+
+    .location i,
+    .location span,
+    .startDay i,
+    .startDay span {
+        font-size: 1.6rem;
+        padding: 5px 0;
+        font-weight: 400;
+    }
+
+    .footer-product {
+        display: flex;
+        margin-top: 20px;
+        justify-content: space-between;
+        background-color: rgb(187, 186, 186);
+    }
+
+    /*Xử lí Phần cảm ơn */
+    .title-tablet span {
+        font-size: 1.6rem;
+        padding-top: 10px;
+        font-weight: 600;
+        line-height: 2rem;
+    }
+
+    .title-tablet h2 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+        margin: 10px 0;
+    }
+
+    .introduce-company {
+        margin: 40px 0;
+    }
+
+    .subject {
+        display: block;
+        padding: 20px 0;
+    }
+
+    .stats-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 40px 0;
+    }
+
+    .stats {
+        text-align: center;
+    }
+
+    .stats i{
+        font-size: 3rem;
+    }
+
+    .stats span {
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+
+    .stats h3 {
+        font-size: 2rem;
+    }
+
+    .fa-calendar {
+        color: green;
+    }
+
+    .fa-user {
+        color: red;
+    }
+
+    .fa-route {
+        color: blue;
+    }
+
+
+
+
+/* Xử lý phần footer */
+    #footer {
+        padding-bottom: 300px !important;
+        height: 100%;
+    } 
+
+    #footer > div.container {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .row-footer {
+        display: block;
+        margin: 0 20px !important;
+    }
+
+    .col-40 img {
+        display: none;
+    }
+
+    .col-20 {
+        width: 100%;
+    }
+
+    .googlemap iframe {
+        height: 180px;
+        width: 300px;
+        border-radius: 5px;
+    }
+
+    .googlemap {
+        position: absolute;
+        display: block;
+        right: 40px;
+        bottom: 100px;
+    }
+}
+
+@media (max-width: 358px) {
+    .btn {
+        padding: 10px 10px !important;
+    }
+
+    .nar-bar-btn {
+        padding: 20px !important;
+        display: block;
+        margin: auto 0 auto 90% !important;
+    }
+
+    .row {
+        margin: 0 !important;
+    }
+    /* Xử lý phần trượt */
+    a#GoToTop {
+        padding: 15px 10px;
+    }
+    
+    a#GoToTop i {
+        font-size: 1.6rem;
+    }
+
+    /* Phần xử lý nav top */
+    div.container {
+        margin-left: 10px;
+    }
+
+    .container1 {
+        margin: 0 20px !important;
+    }
+
+    ul.nav-top__social,
+    div.column {
+        display: block;
+    }
+
+    ul.nav-top__social-mob {
+        display: flex;
+    }
+
+    ul.nav-top__social > li p,
+    ul.nav-top__social > li a {
+        display: block;
+        font-size: 1.4rem;
+        padding: 0;
+    }
+
+    /* Kết thúc nav top */
+
+    /* Phần mạng xã hội */
+    .ads > li > a > i {
+        font-size: 1.8rem;
+        padding: 10px 10px;
+    }
+    /* Kết thúc phần mạng xã hội */
+
+    .nar-bar-btn {
+        display: block;
+        padding: 10px;
+    }
+
+    div.col-10 > img {
+        display: none;
+    }
+
+    .nav-Bar-items {
+        display: none;
+    }
+
+   
+
+    .nar-bar-btn {
+        padding: 20px;
+        display: block;
+        margin: auto 0 auto 95%;
+    }
+
+    div.col-10  {
+        margin: 0;
+    }
+
+    .col-90 {
+        display: none;
+    }
+
+    .nav-overlay {
+        z-index: 99999;
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    
+    .col-90-tablet {
+        display: block;
+        z-index: 999999;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 270px;
+        max-width: 100%;
+        background-color: rgb(160, 156, 156);
+        transform: translateX(100%);
+        transition: transform linear 0.2s;
+    }
+
+    .nav-Bar-items-tablet {
+        padding-top: 50px;
+    }
+
+    .nav-Bar-items-tablet > li {
+        display: block;
+        padding: 10px 0 10px 30px ;
+    }
+
+    .nav-Bar-items-tablet > li > a {
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: bold;
+        color: var(--nav-color);
+    }
+
+    /* Xử lý phần menu con trong menu */
+    .travel-tablet,
+    .hotel-tablet {
+        display: none;
+    }
+
+    .hotel-tablet > .hotel-items-tablet,
+    .travel-items-tablet {
+        margin-left: 30px;
+    }
+
+    .hotel-items-tablet > ul > li,
+    .travel-items-tablet > ul > li {
+        margin-top: 10px;
+        padding: 5px 0;
+    }
+
+    .travel-items-tablet > ul > li > a,
+    .hotel-items-tablet > ul > li > a {
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: bold;
+        color: var(--nav-color);
+    }
+
+    .travel-items-tablet > ul > li > a:hover,
+    .hotel-items-tablet > ul > li > a:hover {
+        color: white;
+    }
+
+    .nav-Bar-items-tablet > li a:hover {
+        color: white;
+    }
+
+    li.travel-main-tablet:hover div.travel-tablet,
+    li.hotel-main-tablet:hover div.hotel-tablet {
+        display: block;
+    }
+
+    .footer-product > div.price {
+        font-size: 1.4rem;
+        padding: 12px;
+    }
+
+    .info-SanPham > a > p {
+        margin: 20px 0 10px 0;
+        color: var(--text-color);
+        font-size: 1.6rem;
+        line-height: 2rem;
+        font-weight: 600;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+
+    /* Xử lý icon */
+    .btnDelete-icon {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+    }
+
+    .btnDelete-icon i {
+        font-size: 1.8rem;
+        color: white;
+    }
+
+    /* Xử lý ẩn hiện */
+    .check__input:checked ~ .nav-overlay {
+        display: block;
+    }
+
+    .check__input:checked ~ .col-90-tablet {
+        transform: translateX(0%);
+    }
+
+    .Tour-items {
+        display: none;
+    }
+
+    /* Xử lý phần sản phẩm */
+
+    .row-SanPhamHot > div.col-30 {
+        width: 100%;
+        margin: 20px 20px;
+    }
+
+    .location i,
+    .location span,
+    .startDay i,
+    .startDay span {
+        font-size: 1.6rem;
+        padding: 5px 0;
+        font-weight: 400;
+    }
+
+    .footer-product {
+        display: flex;
+        margin-top: 20px;
+        justify-content: space-between;
+        background-color: rgb(187, 186, 186);
+    }
+
+    /*Xử lí Phần cảm ơn */
+    .title-tablet span {
+        font-size: 1.6rem;
+        padding-top: 10px;
+        font-weight: 600;
+        line-height: 2rem;
+    }
+
+    .title-tablet h2 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+        margin: 10px 0;
+    }
+
+    .introduce-company {
+        margin: 40px 0;
+    }
+
+    .subject {
+        display: block;
+        padding: 20px 0;
+    }
+
+    .stats-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 40px 0;
+    }
+
+    .stats {
+        text-align: center;
+    }
+
+    .stats i{
+        font-size: 3rem;
+    }
+
+    .stats span {
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+
+    .stats h3 {
+        font-size: 2rem;
+    }
+
+    .fa-calendar {
+        color: green;
+    }
+
+    .fa-user {
+        color: red;
+    }
+
+    .fa-route {
+        color: blue;
+    }
+
+
+
+
+/* Xử lý phần footer */
+    #footer {
+        padding-bottom: 300px !important;
+        height: 100%;
+    } 
+
+    #footer > div.container {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .row-footer {
+        display: block;
+        margin: 0 20px !important;
+    }
+
+    .col-40 img {
+        display: none;
+    }
+
+    .col-20 {
+        width: 100%;
+    }
+
+    .googlemap iframe {
+        height: 180px;
+        width: 300px;
+        border-radius: 5px;
+    }
+
+    .googlemap {
+        position: absolute;
+        display: block;
+        right: 40px;
+        bottom: 100px;
+    }
+}
