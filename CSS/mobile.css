@@ -311,6 +311,17 @@
         width: 100%;
     }
 
+    .col-20 h3 {
+        margin: 0 0 10px 0;
+        font-size: 1.6rem;
+    }
+
+    .footer-items > li > a,
+    .footer-items > li > p {
+        font-size: 1.4rem;
+        padding: 2px 0;
+    }
+
     .googlemap iframe {
         height: 180px;
         width: 300px;
@@ -323,7 +334,280 @@
         right: 40px;
         bottom: 100px;
     }
+
+    /* Xử lý phần trang liên hệ */
+    div.itemContact {
+        padding-top: 10px;
+    }
+
+    .title h2 {
+        font-size: 2rem;
+        line-height: 4rem;
+    }
+
+    .contact-icon {
+        margin-left: 20px;
+    }
+
+    .contact-icon i {
+        font-size: 2rem;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    .contact-info {
+        margin-left: 20px;
+    }
+
+    .contact-info h3,
+    .contact-info h3 > span {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+
+    .contact-info > span {
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+
+    /* Xử lý phần tin tức */
+    #news .container {
+        margin-right: 10px;
+    }
+
+    .news-items a > h3 {
+        font-size: 1.2rem;
+        line-height: 2rem;
+        font-weight: 700;
+        color: var(--nav-color);
+    }
+
+    .news-items > p {
+        overflow: hidden;
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+
+    .news-items {
+        padding: 0 20px 10px;
+    }
+
+    .news-items::after {
+        height: 130px;
+    }
+
+
+    /* Xử lý trang chi tiết */
+    #TripInfo .container {
+        margin-right: 0;
+    }
+
+    #TripInfo {
+        top: 20px;
+    }
+
+    .TripInfo-row {
+        display: block;
+    }
+
+    #TripInfo .TripInfo-info {
+        display: block;
+        position: relative;
+        padding-bottom: 40px;
+    }
+
+    .column-6 {
+        width: 100%;
+    }
+
+    .col-4 {
+        width: 100%;
+    }
+
+    .TripInfo-col4 {
+        margin: 0;
+        padding-bottom: 40px;
+    }
+
+    .TripInfo-price {
+        padding: 5px 0;
+    }
+
+    .TripInfo-PlaceAndDay {
+        margin: 0 20px;
+    }
+
+    .TripInfo-Place,
+    .TripInfo-Day {
+        padding: 5px 0 10px;
+    }
+
+    .TripInfo-btn {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    .TripInfo-btn input.btn {
+        padding: 10px 20px;
+        font-size: 1.6rem;
+    }
+
+    .TripInfo-img-items img {
+        height: 70px;
+    }
+
+    div.time table tbody tr td,
+    div.time table thead th {
+        font-size: 1rem;
+    }
+
+    div.time table tbody .btn {
+        padding: 10px;
+    }
+
+    .TripInfo-col4 div ul li {
+        margin: 0;
+    }
+
+    .TripInfo-col4 div ul li i {
+        padding-left: 10px;
+    }
+
+    .Phone-number i, 
+    .Phone-number span {
+        font-size: 1.8rem;
+    }
+
+    div.PS ul {
+        padding-left: 20px;
+    }
+
+    .TripInfo-content span,
+    .TripInfo-content i {
+        font-size: 1.6rem;
+    }
+
+
+    /* Xử lý phần giỏ hàng */
+    #information .row-information {
+        display: block;
+        margin: 0;
+    }
+
+    #information .container {
+        margin-right: 10px;
+    }
+
+    #information .col30 {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    #information div.col-70 {
+        width: 100%;
+        padding: 0 10px;
+        margin: 20px 0;
+    }
+
+    .Info-trip-items {
+        display: block;
+    }
+
+    #information .Item-img {
+        display: none;
+    }
+
+    #information .Item-infoTrip {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #information .Item-infoTrip h3 {
+        font-size: 1.6rem;
+    }
+
+    div.form-title h2,
+    div.form-title i {
+        font-size: 1.6rem;
+    }
+
+    div.total span {
+        font-size: 2rem;
+        padding: 0;
+        margin: 10px;
+    }
+
+    div.total > span > span {
+        margin: 0 10px;
+    }
+
+    div.total > span {
+        display: flex;
+    }
+
+    form > div.formInfo input {
+        padding: 5px;
+        font-size: 1.4rem;
+    }
+
+    form > div.formInfo label {
+        font-size: 1.4rem;
+    }
+
+    div.Info-trip > div.content {
+        padding-left: 10px;
+    }
+
+    div.Info-trip > div.content i,
+    div.Info-trip > div.content span {
+        font-size: 1.6rem;
+    }
+
+    .numberOfPeople-item span.total-item {
+        margin-left: 5px;
+    }
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 358px) {
     .btn {
@@ -654,4 +938,217 @@
         right: 40px;
         bottom: 100px;
     }
+
+    /* Xử lý phần trang liên hệ */
+    div.itemContact {
+        padding-top: 10px;
+    }
+
+    .title h2 {
+        font-size: 2rem;
+        line-height: 4rem;
+    }
+
+    .contact-icon {
+        margin-left: 20px;
+    }
+
+    .contact-icon i {
+        font-size: 2rem;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    .contact-info {
+        margin-left: 30px;
+    }
+
+    .contact-info h3,
+    .contact-info h3 > span {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+
+    .contact-info h3 > a {
+        font-size: 1rem;
+    }
+
+    .contact-info > span {
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+
+    /* Xử lý trang chi tiết */
+    #TripInfo .container {
+        margin-right: 0;
+    }
+
+    #TripInfo {
+        top: 20px;
+    }
+
+    .TripInfo-row {
+        display: block;
+    }
+
+    #TripInfo .TripInfo-info {
+        display: block;
+        position: relative;
+        padding-bottom: 40px;
+    }
+
+    .column-6 {
+        width: 100%;
+    }
+
+    .col-4 {
+        width: 100%;
+    }
+
+    .TripInfo-col4 {
+        margin: 0;
+        padding-bottom: 40px;
+    }
+
+    .TripInfo-price {
+        padding: 5px 0;
+    }
+
+    .TripInfo-PlaceAndDay {
+        margin: 0 20px;
+    }
+
+    .TripInfo-Place,
+    .TripInfo-Day {
+        padding: 5px 0 10px;
+    }
+
+    .TripInfo-btn {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    .TripInfo-btn input.btn {
+        padding: 10px 20px;
+        font-size: 1.6rem;
+    }
+
+    .TripInfo-img-items img {
+        height: 70px;
+    }
+
+    div.time table tbody tr td,
+    div.time table thead th {
+        font-size: 1rem;
+    }
+
+    div.time table tbody .btn {
+        padding: 10px;
+    }
+
+    .TripInfo-col4 div ul li {
+        margin: 0;
+    }
+
+    .TripInfo-col4 div ul li i {
+        padding-left: 10px;
+    }
+
+    .Phone-number i, 
+    .Phone-number span {
+        font-size: 1.8rem;
+    }
+
+    div.PS ul {
+        padding-left: 20px;
+    }
+
+    .TripInfo-content span,
+    .TripInfo-content i {
+        font-size: 1.6rem;
+    }
+
+
+    /* xử lý giỏ hàng */
+    #information .row-information {
+        display: block;
+        margin: 0;
+    }
+
+    #information .container {
+        margin-right: 10px;
+    }
+
+    #information .col30 {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    #information div.col-70 {
+        width: 100%;
+        padding: 0 10px;
+        margin: 20px 0;
+    }
+
+    .Info-trip-items {
+        display: block;
+    }
+
+    #information .Item-img {
+        display: none;
+    }
+
+    #information .Item-infoTrip {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #information .Item-infoTrip h3 {
+        font-size: 1.6rem;
+    }
+
+    div.form-title h2,
+    div.form-title i {
+        font-size: 1.6rem;
+    }
+
+    div.total span {
+        font-size: 2rem;
+        padding: 0;
+        margin: 10px;
+    }
+
+    div.total > span > span {
+        margin: 0 10px;
+    }
+
+    div.total > span {
+        display: flex;
+    }
+
+    form > div.formInfo input {
+        padding: 5px;
+        font-size: 1.4rem;
+    }
+
+    form > div.formInfo label {
+        font-size: 1.4rem;
+    }
+
+    div.Info-trip > div.content {
+        padding-left: 10px;
+    }
+
+    div.Info-trip > div.content i,
+    div.Info-trip > div.content span {
+        font-size: 1.6rem;
+    }
+
+    .numberOfPeople-item span.total-item {
+        margin-left: 5px;
+    }
+
 }

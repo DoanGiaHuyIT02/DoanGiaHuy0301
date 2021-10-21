@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="CSS/index.css">
     <link rel="stylesheet" href="CSS/index-DLTN-DLNN.css">
     <link rel="stylesheet" href="CSS/index-ChiTietChuyenDi.css">
+    <link rel="stylesheet" href="CSS/tablet.css">
+    <link rel="stylesheet" href="CSS/mobile.css">
     <script src="JavaScript/jquery-3.6.0.min.js"></script>
 </head>
 <body onload="init()">
@@ -43,7 +45,7 @@
                                 <a href="">Tuyển dụng</a>
                             </li>
                         </ul>
-                        <ul class="nav-top__social">
+                        <ul class="nav-top__social nav-top__social-mob">
                             <li>
                                 <a href="#">
                                     <i class="fab fa-facebook"></i>
@@ -126,6 +128,79 @@
                             </li>
                         </ul>
                     </div>
+                    <label for="check-menu" class="nar-bar-btn">
+                        <i class="fas fa-bars"></i>
+                    </label>
+
+                    <input type="checkbox" hidden name="" id="check-menu" class="check__input">
+
+                    <label for="check-menu" class="nav-overlay">
+                    </label>
+
+                    <div class="col-90-tablet">
+                        <label for="check-menu" class="btnDelete-icon">
+                            <i class="fas fa-times"></i>
+                        </label>
+                        <ul class="nav-Bar-items-tablet">
+                            <li>
+                                <a href="index.html">
+                                    <i class="fas fa-home"></i>
+                                    Trang chủ
+                                </a>
+                            </li>
+                            <li class="travel-main-tablet">
+                                <a href="#" >
+                                    <i class="fas fa-umbrella-beach"></i>
+                                    Du lịch 
+                                    <i class="fas fa-chevron-down"></i>
+                                </a>
+                                <div class="travel-tablet">
+                                    <div class="travel-items-tablet">
+                                        <ul>
+                                            <li>
+                                                <a href="index-DuLichTrongNuoc.html"> - Du lịch trong nước</a>
+                                            </li>
+                                            <li>
+                                                <a href="index.DuLichNuocNgoai.html"> - Du lịch nước ngoài</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="hotel-main-tablet">
+                                <a href="#">
+                                    <i class="fas fa-hotel"></i>
+                                    Khách sạn
+                                    <i class="fas fa-chevron-down"></i>
+                                </a>
+                                <div class="hotel-tablet">
+                                    <div class="hotel-items-tablet">
+                                        <ul>
+                                            <li>
+                                                <a href="#"> - Khách sạn trong nước</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"> - Khách sạn ngoài nước</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="index-LienHe.html">
+                                    <i class="fas fa-address-book"></i>
+                                    Liên hệ
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index-TinTuc.html">
+                                    <i class="fas fa-newspaper"></i>
+                                    Tin tức
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
             </div>
         </nav>
@@ -202,7 +277,52 @@
                             <img src="imgs/ảnh-sản-phẩm/NN2-3.jpg" alt="sp1-3" id="img4"/>
                         </div>
                     </div>
+                </div>
     
+                <div class="col-4 TripInfo-col4">
+                    <div class="TripInfo-infoMain">
+                        <div class="TripInfo-content">
+                            <i class="fas fa-stream"></i>
+                            <span>Thông tin chuyến đi</span>
+                        </div>
+    
+                        <div class="infoMain">
+                            <ul>
+                                <li>
+                                    <i class="fas fa-map-signs"></i>
+                                    <span id="NameTripCT"> Du lịch Anh Quốc: Combo trọn gói, vé khứ hồi, khách sạn 5 sao, 7 ngày 6 đêm</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-barcode"></i>
+                                    <span id="TourCode">Mã tour: HT-TL0301</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-plane-departure"></i>
+                                    <span>Phương tiện: Máy bay</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-male"></i>
+                                    <span>Số lượng: 255 ghế</span>
+                                </li>
+                                <li>
+                                    <i class="far fa-flag"></i>
+                                    <span id="addressStar">Khởi hành tại: Thành phố Hò Chí Minh</span>
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <div class="Phone-number">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>1900 0301</span>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+
+            <div class="row TripInfo-row">
+                <div class="column-6">
                     <div class="NgayKhac">
                         <div class="TripInfo-content">
                             <i class="far fa-calendar-alt"></i>
@@ -329,45 +449,6 @@
                                 <li>Trẻ em từ 12 tuổi trở lên ngủ giường phụ: 2.885.000vnd/khách, bao gồm vé xe giường nằm.</li>
                                 <li>Các dịch vụ không có trong mục bao gồm.</li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="col-4 TripInfo-col4">
-                    <div class="TripInfo-infoMain">
-                        <div class="TripInfo-content">
-                            <i class="fas fa-stream"></i>
-                            <span>Thông tin chuyến đi</span>
-                        </div>
-    
-                        <div class="infoMain">
-                            <ul>
-                                <li>
-                                    <i class="fas fa-map-signs"></i>
-                                    <span id="NameTripCT"> Du lịch Anh Quốc: Combo trọn gói, vé khứ hồi, khách sạn 5 sao, 7 ngày 6 đêm</span>
-                                </li>
-                                <li>
-                                    <i class="fas fa-barcode"></i>
-                                    <span id="TourCode">Mã tour: HT-TL0301</span>
-                                </li>
-                                <li>
-                                    <i class="fas fa-plane-departure"></i>
-                                    <span>Phương tiện: Máy bay</span>
-                                </li>
-                                <li>
-                                    <i class="fas fa-male"></i>
-                                    <span>Số lượng: 255 ghế</span>
-                                </li>
-                                <li>
-                                    <i class="far fa-flag"></i>
-                                    <span id="addressStar">Khởi hành tại: Thành phố Hò Chí Minh</span>
-                                </li>
-                            </ul>
-                        </div>
-    
-                        <div class="Phone-number">
-                            <i class="fas fa-phone-alt"></i>
-                            <span>1900 0301</span>
                         </div>
                     </div>
                 </div>

@@ -252,6 +252,122 @@
         width: 300px;
         border-radius: 5px;
     }
+    /* Xử lý phần liên hệ */
+    .contact-icon {
+        margin-left: 20px;
+    }
+
+    .contact-icon i {
+        font-size: 2rem;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    .contact-info {
+        margin-left: 20px;
+    }
+
+    .contact-info h3,
+    .contact-info h3 > span {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+    .contact-info h3 > a {
+        font-size: 2rem !important;
+    }
+
+    .contact-info > span {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+    /* xử lý giỏ hàng*/
+    #information .row-information {
+        display: block;
+        margin: 0;
+    }
+
+    #information .container {
+        margin-right: 10px;
+    }
+
+    #information .col30 {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    #information div.col-70 {
+        width: 100%;
+        padding: 0 10px;
+        margin: 20px 0;
+    }
+
+    #information div.container {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    
+
+    #information .Item-infoTrip {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #information .Item-infoTrip h3 {
+        font-size: 1.6rem;
+    }
+
+    div.form-title h2,
+    div.form-title i {
+        font-size: 1.6rem;
+    }
+
+    div.total span {
+        font-size: 2rem;
+        padding: 0;
+        margin: 10px;
+    }
+
+    div.total > span > span {
+        margin: 0 10px;
+    }
+
+    div.total > span {
+        display: flex;
+    }
+
+    #information .formInfo {
+        padding: 0 200px 10px;
+    }
+
+    form > div.formInfo input {
+        padding: 5px;
+        font-size: 1.4rem;
+        width: 100%;
+    }
+
+    form > div.formInfo label {
+        font-size: 1.4rem;
+    }
+
+    div.Info-trip > div.content {
+        padding-left: 10px;
+    }
+
+    div.Info-trip > div.content i,
+    div.Info-trip > div.content span {
+        font-size: 1.6rem;
+    }
+
+    .numberOfPeople-item span.total-item {
+        margin-left: 5px;
+    }
+
+
 }
 
 

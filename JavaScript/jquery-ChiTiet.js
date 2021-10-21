@@ -52,6 +52,8 @@ function layThongTinDuLichChiTiet() {
     console.log(duLichItem);
 
 
+    
+
 
 // Phần thay đổi thông tin 
     // Thay đổi ảnh nền
@@ -92,6 +94,17 @@ function layThongTinDuLichChiTiet() {
     $.each($(".total-item2"), function (){
         $(this).text(duLichItem.price)
     });
+}
+
+function datNgayClick(id, loai) {
+    // var item = $(this);
+
+    // loai 1 => data
+    // loai 2 => trong nuoc
+    // loai 3 => ngoai nuoc
+
+    // window.location.href = "/index-gioHang.html?id=" + id;
+    window.location.href = `/index-gioHang.html?id=${id}&loai=${loai}`;
 }
 
 $(document).ready(function() {

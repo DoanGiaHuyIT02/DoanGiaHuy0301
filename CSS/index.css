@@ -142,7 +142,7 @@ ul.nav-Bar-items li {
     color: var(--nav-color);
     font-size: 2.5rem;
     font-weight: 700;
-    padding: 55px 0;
+    padding: 63px 0;
 }
 
 ul.nav-Bar-items > li > a:hover {
