@@ -399,6 +399,7 @@ ul.ads i:hover {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+    cursor: pointer;
 }
 
 
