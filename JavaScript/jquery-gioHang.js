@@ -51,39 +51,10 @@ function layThongTinDuLich() {
 
    
 
-    // Truong hop 1: data, trongnuoc, ngoai nuoc id khac nhau => GOP
-     
-    // data
-    // dataTrongNuoc
-    // dataNuocNgoai
-
-    // GOP = gop (dataTrongNuoc, dataNuocNgoai)
-
-    // sau khi gop 3 thang thì co id thì lay ra thoi
-
-    // truong hop 2: id giong nhau nhung loai khac nha => tim cach de biet la thang nao
-
-
     // chuyen data => javascript object/array
     var data = JSON.parse(dataString);
 
     var duLichItem = data.find(d => d.id === idInt);
-
-
-    // var imgListHTML = "";
-
-    // var list = duLichItem.imgList;
-    // for (var index = 0; index < list.length; index++) {
-
-
-    //     imgListHTML = imgListHTML + `<img src="${list[index].img}" />`
-    // }
-
-    // console.log(imgListHTML);
-        // <img src="imgs/ảnh-sản-phẩm/NN2.jpg" alt="sp1"/>
-        // <img src="imgs/ảnh-sản-phẩm/NN2-1.jpg" alt="sp1-1"/>
-        // <img src="imgs/ảnh-sản-phẩm/NN2-2.jpg" alt="sp1-2"/>
-        // <img src="imgs/ảnh-sản-phẩm/NN2-3.jpg" alt="sp1-3"/>
 
 
     console.log(duLichItem);
@@ -298,7 +269,6 @@ Validator.isRequired = function(selector, message) {
     };
 }
 
-
 // Biểu thức kiểm tra email: var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 Validator.isEmail = function(selector, message) {
     return {
@@ -328,4 +298,116 @@ Validator.isAddress = function(selector, message) {
             return value.trim() ? undefined : message || 'Vui lòng nhập địa chỉ'
         }
     };
+}
+
+$(document).ready(function() {
+    $("#submit").click(function() {
+
+        // lay query string tu url
+        var urlSearchParams = new URLSearchParams(window.location.search);
+        var params = Object.fromEntries(urlSearchParams.entries());
+        // END lay query string tu url
+
+        var id = params.id;
+        var loai = params.loai;
+        var idInt = parseInt(id);
+        var loaiInt = parseInt(loai);
+
+
+        var dataString = null;
+
+        if(loaiInt === 1)
+        {
+            console.log("dataStored");
+            dataString = localStorage.getItem("dataStored");
+        }
+
+        if(loaiInt === 2)
+        {
+            console.log("dataTN");
+            dataString = localStorage.getItem("dataTN");
+        }
+
+        if(loaiInt === 3)
+        {
+            console.log("dataNN");
+            dataString = localStorage.getItem("dataNN");
+        }
+
+        // chuyen data => javascript object/array
+        var data = JSON.parse(dataString);
+
+        var duLichItem = data.find(d => d.id === idInt);
+
+        // Lấy thông tin
+        var name = duLichItem.title;
+        var time = duLichItem.startDay;
+        var price = duLichItem.price;
+
+    
+        var fullName = $("#fullName").val();
+        var number = $("#phoneNumber").val();
+        var email = $("#email").val();
+        var address = $("#address").val();
+
+        if (fullName === " " || number === " " || email === "" || address === "") {
+            alert('Vui lòng nhập thông tin đầy đủ');
+        } else {
+            $("div.modal").show();
+
+            $("div.PageSubmit-main").prepend(`
+            <div class="ThongTinKhachHang action">
+                <div class="title1">
+                    <h2>THÔNG TIN KHÁCH HÀNG</h2>
+                    <ul>
+                    <li>
+                        Tên khách hàng: 
+                        <span>${fullName}</span>
+                    </li>
+                    <li>
+                        Số điện thoại:
+                        <span> ${number}</span>
+                    </li>
+                    <li>
+                        Gmail:
+                        <span> ${email}</span>
+                    </li>
+                    <li>
+                        Địa chỉ:
+                        <span> ${address}</span>
+                    </li>
+                    <li>
+                       <h2>${name}</h2>
+                    </li>
+                    <li>
+                        Ngày khởi hành:
+                        <span>${time}</span>
+                    </li>
+                    <li>
+                        Tổng tiền:
+                        <span>${price}</span>
+                    </li>
+                    </ul>
+                    <button class="submit-XacNhan" onclick="submitDatTour()">Xác Nhận</button>
+                    <label class="daux" > 
+                                    <i class="fas fa-times" onclick="xoaBang()"></i>
+                    </label>
+                </div>
+                
+            </div>
+            `)
+        }  
+    })
+
+    
+})
+
+function submitDatTour() {
+    $("div.modal").remove();
+    alert('Đặt chuyến thành công')
+
+}
+
+function xoaBang() {
+    $("div.modal").remove();
 }

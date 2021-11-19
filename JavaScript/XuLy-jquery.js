@@ -346,7 +346,6 @@ var dataTrongNuoc = [
 
 ]
 
-
 var dataNuocNgoai = [
     {
         id: 1,
@@ -756,6 +755,9 @@ function datNgayClick(id, loai) {
 function chiTietClick(id, loai) {
     window.location.href = `/index-ChiTietChuyenDi.html?id=${id}&loai=${loai}`;
 }
+
+
+
 
 
 
