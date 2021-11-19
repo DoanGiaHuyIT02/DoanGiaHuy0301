@@ -15,34 +15,6 @@ function layThongTinDuLich() {
 
 // var newParam = { id: 1 };
 
-//     var idValue = newParam.id;
-//     var idValue = newParam["id"];
-
-
-    // Gan gia tri 1000 vao thuoc tinh price
-    // cach 1: newParam.price = 1000
-    // cach 2: newParam["price"] = 1000
-
-
-    // var tenThuocTinh = "address";
-    // Gan gia tri Huynh Tan Phat vao thuoc tinh adresss
-    // cach 1: newParam.address = 1000
-    // cach 2: newParam[tenThuocTinh] = 1000
-
-
-
-    // newParam.id = 2; // => { id: 2}
-    // Lấy thuoc tinh title cua object newParam
-    // cach 1 newParam.title
-    // cach 2 newParam["title"]
-    
-    // newParam["title"] = "Du lịch Sapa: Thành phố sương mù của Việt Nam";
-
-
-    // 1 lay URL 'http://dfsdfsf?id=1&loai=2'
-    // 2 lay tu ? den het => id=1&loai=2 (dung substring)
-    // 3 split & de lay tung cai param => ["id=1", "loai=1"] (dung split)
-    // 4 lay gia tri cua param va ten thuoc tinh cua param (xu ly mang arr)
 
 
 

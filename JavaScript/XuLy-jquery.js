@@ -685,9 +685,7 @@ function xuLyHienThiDULieu() {
                     </div> `;
         tourNN = tourNN + DaTaNN;
     }
-    $("#SanPhamNuocNgoai").prepend(tourNN);
-
-   
+    $("#SanPhamNuocNgoai").prepend(tourNN);   
 }
 
 
@@ -718,17 +716,17 @@ function truotDenCacSection() {
 
     $("#TOURHOT").click(function () {
         $("html, body").animate({
-            scrollTop: 1120
+            scrollTop: 1250
         }, 1000)
     })
     $("#TOURTrongNuoc").click(function () {
         $("html, body").animate({
-            scrollTop: 2280
+            scrollTop: 2480
         }, 1000)
     })
     $("#TOURNuocNgoai").click(function () {
         $("html, body").animate({
-            scrollTop: 3460
+            scrollTop: 3700
         }, 1000)
     })
 }

@@ -1,5 +1,10 @@
 #DLNN {
-    background-color: #f3ecec;
+    background-color: #f3ecec !important;
+}
+
+#Travel-NuocNgoai {
+    background-color: #fdfafa !important;
+    padding-bottom: 50px;
 }
 
 .container2 {
