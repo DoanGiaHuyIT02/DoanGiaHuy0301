@@ -1,36 +1,54 @@
-var versionHienTai = "4.9" //LƯU Ý: Khi đổi dữ liệu cần cập nhật version
+var versionHienTai = "4.13" //LƯU Ý: Khi đổi dữ liệu cần cập nhật version
 
+// HTML, CSS
+// JavaScript xu ly du lieu
+// jQuery xu ly du lieu va xu ly UI HTML
 
+var datTour = [
+    {
+        tourId: 1,
+        startDateId: 137,
+        khachSanId: 2,
+        tonTien: '7.899.000',
+        hoTen: 'hoTen',
+        sdt: 'sdt',
+        diaChi: 'diaChi',
+        email: 'email',
+    }
+]
 
 
 var data = [
     {
         id: 1,
+        // loai: 1, // 1 trong nuoc, 2 ngoai nuoc
+        // isHot: 1, // 1 hot, 0 khong 
         anhNen: "imgs/ảnh-nền/Sapa.png",
         img: "imgs/ảnh-sản-phẩm/sp1-2.jpg",
         imgList: [
             { img: "imgs/ảnh-sản-phẩm/sp1.jpg" },
             { img: "imgs/ảnh-sản-phẩm/sp1-1.jpg" },
-            { img: "imgs/ảnh-sản-phẩm/sp1-2.jpg"},
+            { img: "imgs/ảnh-sản-phẩm/sp1-2.jpg" },
             { img: "imgs/ảnh-sản-phẩm/sp1-3.jpg" },
         ],
         title: "Du lịch Sapa: Thành phố sương mù của Việt Nam",
         address: "TP.HCM",
         startDay: "30/04/2022",
         startDayList: [
-            {startDay: "30/04/2022"},
-            {startDay: "01/05/2022"},
-            {startDay: "02/05/2022"},
-            {startDay: "03/05/2022"},
-            {startDay: "04/05/2022"},
-            {startDay: "05/05/2022"},
-            {startDay: "06/05/2022"},
-            {startDay: "07/05/2022"},
+            { startDayId: 137, startDay: "30/04/2022" },
+            { startDayId: 138, startDay: "01/05/2022" },
+            { startDayId: 139, startDay: "02/05/2022" },
+            { startDayId: 140, startDay: "03/05/2022" },
+            { startDayId: 141, startDay: "04/05/2022" },
+            { startDayId: 142, startDay: "05/05/2022" },
+            { startDayId: 143, startDay: "06/05/2022" },
+            { startDayId: 144, startDay: "07/05/2022" },
         ],
         price: "2.199.000 VND",
         priceNoVND: "2.199.000",
         numberDay: "3 ngày 2 đêm",
         maTour: "HT-SP0301"
+
     },
     {
         id: 2,
@@ -39,21 +57,21 @@ var data = [
         imgList: [
             { img: "imgs/ảnh-sản-phẩm/sp4.jpg" },
             { img: "imgs/ảnh-sản-phẩm/TN-Phan Thiết1.jpg" },
-            { img: "imgs/ảnh-sản-phẩm/TN-Phan Thiết2.png"},
+            { img: "imgs/ảnh-sản-phẩm/TN-Phan Thiết2.png" },
             { img: "imgs/ảnh-sản-phẩm/TN-Phan Thiết3.jpg" },
         ],
         title: "Du lịch Phan Thiết: Combo Centara Mirage Resort 5* Mũi Né",
         address: "TP.HCM, Hà Nội",
         startDay: "10/08/2022",
         startDayList: [
-            {startDay: "10/08/2022"},
-            {startDay: "11/08/2022"},
-            {startDay: "12/08/2022"},
-            {startDay: "13/08/2022"},
-            {startDay: "14/08/2022"},
-            {startDay: "15/08/2022"},
-            {startDay: "16/08/2022"},
-            {startDay: "17/08/2022"},
+            { startDayId: 1, startDay: "10/08/2022" },
+            { startDayId: 2, startDay: "11/08/2022" },
+            { startDayId: 3, startDay: "12/08/2022" },
+            { startDayId: 4, startDay: "13/08/2022" },
+            { startDayId: 5, startDay: "14/08/2022" },
+            { startDayId: 6, startDay: "15/08/2022" },
+            { startDayId: 7, startDay: "16/08/2022" },
+            { startDayId: 8, startDay: "17/08/2022" },
         ],
         price: "2.689.000 VND",
         priceNoVND: "2.689.000",
@@ -67,21 +85,21 @@ var data = [
         imgList: [
             { img: "imgs/ảnh-sản-phẩm/TN-Đà Lạt2.jpg" },
             { img: "imgs/ảnh-sản-phẩm/TN-Đà Lạt1.jpg" },
-            { img: "imgs/ảnh-sản-phẩm/TN-Đà Lạt3.jpg"},
+            { img: "imgs/ảnh-sản-phẩm/TN-Đà Lạt3.jpg" },
             { img: "imgs/ảnh-sản-phẩm/TN-Đà Lạt4.jfif" },
         ],
         title: "Du lịch Đà Lạt: Thành phố mộng mơ - Thiên đường nghỉ dưỡng",
         address: "TP.HCM",
         startDay: "02/09/2022",
         startDayList: [
-            {startDay: "02/09/2022"},
-            {startDay: "03/09/2022"},
-            {startDay: "04/09/2022"},
-            {startDay: "05/09/2022"},
-            {startDay: "06/09/2022"},
-            {startDay: "07/09/2022"},
-            {startDay: "08/09/2022"},
-            {startDay: "09/09/2022"},
+            { startDayId: 9, startDay: "02/09/2022" },
+            { startDayId: 10, startDay: "03/09/2022" },
+            { startDayId: 11, startDay: "04/09/2022" },
+            { startDayId: 12, startDay: "05/09/2022" },
+            { startDayId: 13, startDay: "06/09/2022" },
+            { startDayId: 14, startDay: "07/09/2022" },
+            { startDayId: 15, startDay: "08/09/2022" },
+            { startDayId: 16, startDay: "09/09/2022" },
         ],
         price: "4.689.000 VND",
         priceNoVND: "4.689.000",
@@ -95,21 +113,21 @@ var data = [
         imgList: [
             { img: "imgs/ảnh-sản-phẩm/sp5.jpg" },
             { img: "imgs/ảnh-sản-phẩm/TN-Tây Nguyên1.jpg" },
-            { img: "imgs/ảnh-sản-phẩm/TN-Tây Nguyên2.jpg"},
+            { img: "imgs/ảnh-sản-phẩm/TN-Tây Nguyên2.jpg" },
             { img: "imgs/ảnh-sản-phẩm/TN-Tây Nguyên3.jpg" },
         ],
         title: " Du Lịch Tây Nguyên: Buôn Ma Thuột - Pleiku - Bảo Tàng Thế Giới Cà Phê - Thác Phú Cường",
         address: "TP.HCM, Hà Nội",
         startDay: "15/06/2022",
         startDayList: [
-            {startDay: "15/06/2022"},
-            {startDay: "16/06/2022"},
-            {startDay: "17/06/2022"},
-            {startDay: "18/06/2022"},
-            {startDay: "19/06/2022"},
-            {startDay: "20/06/2022"},
-            {startDay: "21/06/2022"},
-            {startDay: "22/06/2022"},
+            { startDayId: 17, startDay: "15/06/2022" },
+            { startDayId: 18, startDay: "16/06/2022" },
+            { startDayId: 19, startDay: "17/06/2022" },
+            { startDayId: 20, startDay: "18/06/2022" },
+            { startDayId: 21, startDay: "19/06/2022" },
+            { startDayId: 22, startDay: "20/06/2022" },
+            { startDayId: 23, startDay: "21/06/2022" },
+            { startDayId: 24, startDay: "22/06/2022" },
         ],
         price: "3.689.000 VND",
         priceNoVND: "3.689.000",
@@ -123,21 +141,21 @@ var data = [
         imgList: [
             { img: "imgs/ảnh-sản-phẩm/TN1.jpg" },
             { img: "imgs/ảnh-sản-phẩm/TN-TâyNinh1.jpg" },
-            { img: "imgs/ảnh-sản-phẩm/TN-TâyNinh2.jpg"},
+            { img: "imgs/ảnh-sản-phẩm/TN-TâyNinh2.jpg" },
             { img: "imgs/ảnh-sản-phẩm/TN-TâyNinh3.webp" },
         ],
         title: "Tham quan Tây Ninh - Đất thánh địa của Miền Nam - Núi Bà Đen - Chùa Tòa Thánh",
         address: "Hà Nội - Hải Phòng",
         startDay: "30/04/2022",
         startDayList: [
-            {startDay: "30/04/2022"},
-            {startDay: "01/05/2022"},
-            {startDay: "02/05/2022"},
-            {startDay: "03/05/2022"},
-            {startDay: "04/05/2022"},
-            {startDay: "05/05/2022"},
-            {startDay: "06/05/2022"},
-            {startDay: "07/05/2022"},
+            { startDayId: 25, startDay: "30/04/2022" },
+            { startDayId: 26, startDay: "01/05/2022" },
+            { startDayId: 27, startDay: "02/05/2022" },
+            { startDayId: 28, startDay: "03/05/2022" },
+            { startDayId: 29, startDay: "04/05/2022" },
+            { startDayId: 30, startDay: "05/05/2022" },
+            { startDayId: 31, startDay: "06/05/2022" },
+            { startDayId: 32, startDay: "07/05/2022" },
         ],
         price: "3.999.000 VND",
         priceNoVND: "3.999.000",
@@ -151,21 +169,21 @@ var data = [
         imgList: [
             { img: "imgs/ảnh-sản-phẩm/sp3.jpg" },
             { img: "imgs/ảnh-sản-phẩm//TN-Hà Nội.jpg" },
-            { img: "imgs/ảnh-sản-phẩm/TN-Sapa1.jpg"},
+            { img: "imgs/ảnh-sản-phẩm/TN-Sapa1.jpg" },
             { img: "imgs/ảnh-sản-phẩm/TN-Sapa.jpg" },
         ],
         title: "Du Lịch Miền Bắc: Hà Nội - Sapa - Fansipan - Thị Trấn Mờ Sương Sapa",
         address: "Thành phố Hồ Chí Minh - Đà Nắng",
         startDay: "30/04/2022",
         startDayList: [
-            {startDay: "30/04/2022"},
-            {startDay: "01/05/2022"},
-            {startDay: "02/05/2022"},
-            {startDay: "03/05/2022"},
-            {startDay: "04/05/2022"},
-            {startDay: "05/05/2022"},
-            {startDay: "06/05/2022"},
-            {startDay: "07/05/2022"},
+            { startDayId: 33, startDay: "30/04/2022" },
+            { startDayId: 34, startDay: "01/05/2022" },
+            { startDayId: 35, startDay: "02/05/2022" },
+            { startDayId: 36, startDay: "03/05/2022" },
+            { startDayId: 37, startDay: "04/05/2022" },
+            { startDayId: 38, startDay: "05/05/2022" },
+            { startDayId: 39, startDay: "06/05/2022" },
+            { startDayId: 40, startDay: "07/05/2022" },
         ],
         price: "5.199.000 VND",
         priceNoVND: "5.199.000",
@@ -182,21 +200,21 @@ var dataTrongNuoc = [
         imgList: [
             { img: "imgs/ảnh-sản-phẩm/TN-Đà Lạt2.jpg" },
             { img: "imgs/ảnh-sản-phẩm/TN-Đà Lạt1.jpg" },
-            { img: "imgs/ảnh-sản-phẩm/TN-Đà Lạt3.jpg"},
+            { img: "imgs/ảnh-sản-phẩm/TN-Đà Lạt3.jpg" },
             { img: "imgs/ảnh-sản-phẩm/TN-Đà Lạt4.jfif" },
         ],
         title: "Du Lịch Đà Lạt: Combo Đặc Biệt dành cho dịp lễ tại Đà Lạt - Lễ 02/09 + Vé Máy Bay Khứ Hồi",
         address: "Thành phố Hồ Chí Minh - Hà Nội",
         startDay: "02/09/2022",
         startDayList: [
-            {startDay: "02/09/2022"},
-            {startDay: "03/09/2022"},
-            {startDay: "04/09/2022"},
-            {startDay: "05/09/2022"},
-            {startDay: "06/09/2022"},
-            {startDay: "07/09/2022"},
-            {startDay: "08/09/2022"},
-            {startDay: "09/09/2022"},
+            { startDayId: 41, startDay: "02/11/2022" },
+            { startDayId: 42, startDay: "03/09/2022" },
+            { startDayId: 43, startDay: "04/09/2022" },
+            { startDayId: 44, startDay: "05/09/2022" },
+            { startDayId: 45, startDay: "06/09/2022" },
+            { startDayId: 46, startDay: "07/09/2022" },
+            { startDayId: 47, startDay: "08/09/2022" },
+            { startDayId: 48, startDay: "09/09/2022" },
         ],
         price: "7.899.000 VND",
         priceNoVND: "7.899.000",
@@ -210,21 +228,21 @@ var dataTrongNuoc = [
         imgList: [
             { img: "imgs/ảnh-sản-phẩm/sp4.jpg" },
             { img: "imgs/ảnh-sản-phẩm/TN-Phan Thiết1.jpg" },
-            { img: "imgs/ảnh-sản-phẩm/TN-Phan Thiết2.png"},
+            { img: "imgs/ảnh-sản-phẩm/TN-Phan Thiết2.png" },
             { img: "imgs/ảnh-sản-phẩm/TN-Phan Thiết3.jpg" },
         ],
         title: "Du Lịch Phan Thiết: Combo Centara Mirage Resort 5* Mũi Né",
         address: "Thành phố Hồ Chí Minh",
         startDay: "10/08/2022",
         startDayList: [
-            {startDay: "10/08/2022"},
-            {startDay: "11/08/2022"},
-            {startDay: "12/08/2022"},
-            {startDay: "13/08/2022"},
-            {startDay: "14/08/2022"},
-            {startDay: "15/08/2022"},
-            {startDay: "16/08/2022"},
-            {startDay: "17/08/2022"},
+            { startDayId: 49, startDay: "10/08/2022" },
+            { startDayId: 50, startDay: "11/08/2022" },
+            { startDayId: 51, startDay: "12/08/2022" },
+            { startDayId: 52, startDay: "13/08/2022" },
+            { startDayId: 53, startDay: "14/08/2022" },
+            { startDayId: 54, startDay: "15/08/2022" },
+            { startDayId: 55, startDay: "16/08/2022" },
+            { startDayId: 56, startDay: "17/08/2022" },
         ],
         price: "2.689.000 VND",
         priceNoVND: "2.689.000",
@@ -238,21 +256,21 @@ var dataTrongNuoc = [
         imgList: [
             { img: "imgs/ảnh-sản-phẩm/TN2.jpg" },
             { img: "imgs/ảnh-sản-phẩm/TN-Vũng Tàu1.jpg" },
-            { img: "imgs/ảnh-sản-phẩm/TN-Vũng Tàu2.jpg"},
+            { img: "imgs/ảnh-sản-phẩm/TN-Vũng Tàu2.jpg" },
             { img: "imgs/ảnh-sản-phẩm/TN-Vũng Tàu3.jfif" },
         ],
         title: " Du lịch biển (Bà Rịa - Vũng Tàu) - Combo trọn gói (vé khứ hồi - khách sạn)",
         address: "Hà Nội - Đà Nẵng - Hải Phòng",
         startDay: "30/04/2022",
         startDayList: [
-            {startDay: "30/04/2022"},
-            {startDay: "01/05/2022"},
-            {startDay: "02/05/2022"},
-            {startDay: "03/05/2022"},
-            {startDay: "04/05/2022"},
-            {startDay: "05/05/2022"},
-            {startDay: "06/05/2022"},
-            {startDay: "07/05/2022"},
+            { startDayId: 57, startDay: "30/04/2022" },
+            { startDayId: 58, startDay: "01/05/2022" },
+            { startDayId: 59, startDay: "02/05/2022" },
+            { startDayId: 60, startDay: "03/05/2022" },
+            { startDayId: 61, startDay: "04/05/2022" },
+            { startDayId: 62, startDay: "05/05/2022" },
+            { startDayId: 63, startDay: "06/05/2022" },
+            { startDayId: 64, startDay: "07/05/2022" },
         ],
         price: "3.709.000 VND",
         priceNoVND: "3.709.000",
@@ -266,21 +284,21 @@ var dataTrongNuoc = [
         imgList: [
             { img: "imgs/ảnh-sản-phẩm/TN1.jpg" },
             { img: "imgs/ảnh-sản-phẩm/TN-TâyNinh1.jpg" },
-            { img: "imgs/ảnh-sản-phẩm/TN-TâyNinh2.jpg"},
+            { img: "imgs/ảnh-sản-phẩm/TN-TâyNinh2.jpg" },
             { img: "imgs/ảnh-sản-phẩm/TN-TâyNinh3.webp" },
         ],
         title: "Tham quan Tây Ninh - Đất thánh địa của Miền Nam - Núi Bà Đen - Chùa Tòa Thánh",
         address: "Hà Nội - Hải Phòng",
         startDay: "30/04/2022",
         startDayList: [
-            {startDay: "30/04/2022"},
-            {startDay: "01/05/2022"},
-            {startDay: "02/05/2022"},
-            {startDay: "03/05/2022"},
-            {startDay: "04/05/2022"},
-            {startDay: "05/05/2022"},
-            {startDay: "06/05/2022"},
-            {startDay: "07/05/2022"},
+            { startDayId: 65, startDay: "30/04/2022" },
+            { startDayId: 66, startDay: "01/05/2022" },
+            { startDayId: 67, startDay: "02/05/2022" },
+            { startDayId: 68, startDay: "03/05/2022" },
+            { startDayId: 69, startDay: "04/05/2022" },
+            { startDayId: 70, startDay: "05/05/2022" },
+            { startDayId: 71, startDay: "06/05/2022" },
+            { startDayId: 72, startDay: "07/05/2022" },
         ],
         price: "3.999.000 VND",
         priceNoVND: "3.999.000",
@@ -294,21 +312,21 @@ var dataTrongNuoc = [
         imgList: [
             { img: "imgs/ảnh-sản-phẩm/sp5.jpg" },
             { img: "imgs/ảnh-sản-phẩm/TN-Tây Nguyên1.jpg" },
-            { img: "imgs/ảnh-sản-phẩm/TN-Tây Nguyên2.jpg"},
+            { img: "imgs/ảnh-sản-phẩm/TN-Tây Nguyên2.jpg" },
             { img: "imgs/ảnh-sản-phẩm/TN-Tây Nguyên3.jpg" },
         ],
         title: "Du Lịch Tây Nguyên: Buôn Ma Thuột - Pleiku - Bảo Tàng Thế Giới Cà Phê - Thác Phú Cường",
         address: "Hà Nội - Thành phố Hồ Chí Minh",
         startDay: "30/04/2022",
         startDayList: [
-            {startDay: "30/04/2022"},
-            {startDay: "01/05/2022"},
-            {startDay: "02/05/2022"},
-            {startDay: "03/05/2022"},
-            {startDay: "04/05/2022"},
-            {startDay: "05/05/2022"},
-            {startDay: "06/05/2022"},
-            {startDay: "07/05/2022"},
+            { startDayId: 73, startDay: "30/04/2022" },
+            { startDayId: 74, startDay: "01/05/2022" },
+            { startDayId: 75, startDay: "02/05/2022" },
+            { startDayId: 76, startDay: "03/05/2022" },
+            { startDayId: 77, startDay: "04/05/2022" },
+            { startDayId: 78, startDay: "05/05/2022" },
+            { startDayId: 79, startDay: "06/05/2022" },
+            { startDayId: 80, startDay: "07/05/2022" },
         ],
         price: "2.509.000 VND",
         priceNoVND: "2.509.000",
@@ -322,21 +340,21 @@ var dataTrongNuoc = [
         imgList: [
             { img: "imgs/ảnh-sản-phẩm/sp1.jpg" },
             { img: "imgs/ảnh-sản-phẩm/sp1-1.jpg" },
-            { img: "imgs/ảnh-sản-phẩm/sp1-2.jpg"},
+            { img: "imgs/ảnh-sản-phẩm/sp1-2.jpg" },
             { img: "imgs/ảnh-sản-phẩm/sp1-3.jpg" },
         ],
         title: " Du lịch Sapa: Combo trọn gói 3 ngày 2 đêm.",
         address: "Thành phố Hồ Chí Minh",
         startDay: "30/04/2022",
         startDayList: [
-            {startDay: "30/04/2022"},
-            {startDay: "01/05/2022"},
-            {startDay: "02/05/2022"},
-            {startDay: "03/05/2022"},
-            {startDay: "04/05/2022"},
-            {startDay: "05/05/2022"},
-            {startDay: "06/05/2022"},
-            {startDay: "07/05/2022"},
+            { startDayId: 81, startDay: "30/04/2022" },
+            { startDayId: 82, startDay: "01/05/2022" },
+            { startDayId: 83, startDay: "02/05/2022" },
+            { startDayId: 84, startDay: "03/05/2022" },
+            { startDayId: 85, startDay: "04/05/2022" },
+            { startDayId: 86, startDay: "05/05/2022" },
+            { startDayId: 87, startDay: "06/05/2022" },
+            { startDayId: 88, startDay: "07/05/2022" },
         ],
         price: "6.689.000 VND",
         priceNoVND: "6.689.000",
@@ -361,14 +379,14 @@ var dataNuocNgoai = [
         address: "Thành phố Hồ Chí Minh (Hộ Chiếu)",
         startDay: "30/04/2022",
         startDayList: [
-            {startDay: "30/04/2022"},
-            {startDay: "01/05/2022"},
-            {startDay: "02/05/2022"},
-            {startDay: "03/05/2022"},
-            {startDay: "04/05/2022"},
-            {startDay: "05/05/2022"},
-            {startDay: "06/05/2022"},
-            {startDay: "07/05/2022"},
+            { startDayId: 89, startDay: "30/04/2022" },
+            { startDayId: 90, startDay: "01/05/2022" },
+            { startDayId: 91, startDay: "02/05/2022" },
+            { startDayId: 92, startDay: "03/05/2022" },
+            { startDayId: 93, startDay: "04/05/2022" },
+            { startDayId: 94, startDay: "05/05/2022" },
+            { startDayId: 95, startDay: "06/05/2022" },
+            { startDayId: 96, startDay: "07/05/2022" },
         ],
         price: "8.199.000 VND",
         priceNoVND: "8.199.000",
@@ -389,14 +407,14 @@ var dataNuocNgoai = [
         address: "Thành phố Hồ Chí Minh (Hộ Chiếu)",
         startDay: "30/04/2022",
         startDayList: [
-            {startDay: "30/04/2022"},
-            {startDay: "01/05/2022"},
-            {startDay: "02/05/2022"},
-            {startDay: "03/05/2022"},
-            {startDay: "04/05/2022"},
-            {startDay: "05/05/2022"},
-            {startDay: "06/05/2022"},
-            {startDay: "07/05/2022"},
+            { startDayId: 97, startDay: "30/04/2022" },
+            { startDayId: 98, startDay: "01/05/2022" },
+            { startDayId: 99, startDay: "02/05/2022" },
+            { startDayId: 100, startDay: "03/05/2022" },
+            { startDayId: 101, startDay: "04/05/2022" },
+            { startDayId: 102, startDay: "05/05/2022" },
+            { startDayId: 103, startDay: "06/05/2022" },
+            { startDayId: 104, startDay: "07/05/2022" },
         ],
         price: "10.399.000 VND",
         priceNoVND: "10.399.000",
@@ -417,14 +435,14 @@ var dataNuocNgoai = [
         address: "Thành phố Hồ Chí Minh (Hộ Chiếu)",
         startDay: "30/04/2022",
         startDayList: [
-            {startDay: "30/04/2022"},
-            {startDay: "01/05/2022"},
-            {startDay: "02/05/2022"},
-            {startDay: "03/05/2022"},
-            {startDay: "04/05/2022"},
-            {startDay: "05/05/2022"},
-            {startDay: "06/05/2022"},
-            {startDay: "07/05/2022"},
+            { startDayId: 105, startDay: "30/04/2022" },
+            { startDayId: 106, startDay: "01/05/2022" },
+            { startDayId: 107, startDay: "02/05/2022" },
+            { startDayId: 108, startDay: "03/05/2022" },
+            { startDayId: 109, startDay: "04/05/2022" },
+            { startDayId: 110, startDay: "05/05/2022" },
+            { startDayId: 111, startDay: "06/05/2022" },
+            { startDayId: 112, startDay: "07/05/2022" },
         ],
         price: "4.199.000 VND",
         priceNoVND: "4.199.000",
@@ -433,7 +451,7 @@ var dataNuocNgoai = [
     },
     {
         id: 4,
-        anhNen: "imgs/ảnh-nền/HanQuoc.png" ,
+        anhNen: "imgs/ảnh-nền/HanQuoc.png",
         img: "imgs/ảnh-sản-phẩm/NN4.jpg",
         imgList: [
             { img: "imgs/ảnh-sản-phẩm/NN4.jpg" },
@@ -445,14 +463,14 @@ var dataNuocNgoai = [
         address: "Thành phố Hồ Chí Minh (Hộ Chiếu)",
         startDay: "30/04/2022",
         startDayList: [
-            {startDay: "30/04/2022"},
-            {startDay: "01/05/2022"},
-            {startDay: "02/05/2022"},
-            {startDay: "03/05/2022"},
-            {startDay: "04/05/2022"},
-            {startDay: "05/05/2022"},
-            {startDay: "06/05/2022"},
-            {startDay: "07/05/2022"},
+            { startDayId: 113, startDay: "30/04/2022" },
+            { startDayId: 114, startDay: "01/05/2022" },
+            { startDayId: 115, startDay: "02/05/2022" },
+            { startDayId: 116, startDay: "03/05/2022" },
+            { startDayId: 117, startDay: "04/05/2022" },
+            { startDayId: 118, startDay: "05/05/2022" },
+            { startDayId: 119, startDay: "06/05/2022" },
+            { startDayId: 120, startDay: "07/05/2022" },
         ],
         price: "6.199.000 VND",
         priceNoVND: "6.199.000",
@@ -473,14 +491,14 @@ var dataNuocNgoai = [
         address: "Thành phố Hồ Chí Minh (Hộ Chiếu)",
         startDay: "30/04/2022",
         startDayList: [
-            {startDay: "30/04/2022"},
-            {startDay: "01/05/2022"},
-            {startDay: "02/05/2022"},
-            {startDay: "03/05/2022"},
-            {startDay: "04/05/2022"},
-            {startDay: "05/05/2022"},
-            {startDay: "06/05/2022"},
-            {startDay: "07/05/2022"},
+            { startDayId: 121, startDay: "30/04/2022" },
+            { startDayId: 122, startDay: "01/05/2022" },
+            { startDayId: 123, startDay: "02/05/2022" },
+            { startDayId: 124, startDay: "03/05/2022" },
+            { startDayId: 125, startDay: "04/05/2022" },
+            { startDayId: 126, startDay: "05/05/2022" },
+            { startDayId: 127, startDay: "06/05/2022" },
+            { startDayId: 128, startDay: "07/05/2022" },
         ],
         price: "5.899.000 VND",
         priceNoVND: "5.899.000",
@@ -501,14 +519,14 @@ var dataNuocNgoai = [
         address: "Thành phố Hồ Chí Minh (Hộ Chiếu)",
         startDay: "30/04/2022",
         startDayList: [
-            {startDay: "30/04/2022"},
-            {startDay: "01/05/2022"},
-            {startDay: "02/05/2022"},
-            {startDay: "03/05/2022"},
-            {startDay: "04/05/2022"},
-            {startDay: "05/05/2022"},
-            {startDay: "06/05/2022"},
-            {startDay: "07/05/2022"},
+            { startDayId: 129, startDay: "30/04/2022" },
+            { startDayId: 130, startDay: "01/05/2022" },
+            { startDayId: 131, startDay: "02/05/2022" },
+            { startDayId: 132, startDay: "03/05/2022" },
+            { startDayId: 133, startDay: "04/05/2022" },
+            { startDayId: 134, startDay: "05/05/2022" },
+            { startDayId: 135, startDay: "06/05/2022" },
+            { startDayId: 136, startDay: "07/05/2022" },
         ],
         price: "15.199.000 VND",
         priceNoVND: "15.199.000",
@@ -570,10 +588,12 @@ function xuLyHienThiDULieu() {
     var tourTN = '';
     var tourNN = '';
 
-    for (var  i = 0;  i < data.length;  i++) {
+    for (var i = 0; i < data.length; i++) {
         const item = data[i];
-        
-        
+
+        console.log("HOT");
+        console.log(item.startDayList);
+
         var dataHTML = `
                             <div class="col-30">
                                 <div class="product-items">
@@ -595,7 +615,7 @@ function xuLyHienThiDULieu() {
                                         </div>
                                         <div class="startDay">
                                             <i class="far fa-clock"></i>
-                                            <span>${item.startDay}</span>
+                                            <span>${item.startDayList[0].startDay}</span>
                                         </div>
                                     </div>
                                     <div class="footer-product">
@@ -603,7 +623,7 @@ function xuLyHienThiDULieu() {
                                             <i class="fas fa-money-bill-alt"></i>
                                             <span>${item.price}</span>
                                         </div>
-                                        <input class="btn" type="button" value="Đặt ngay" onclick="datNgayClick(${item.id}, 1)">
+                                        <input class="btn" type="button" value="Đặt ngay" onclick="datNgayClick(${item.id}, 1, ${item.startDayList[0].startDayId})">
                                     </div>
                                 </div>
                             </div>`;
@@ -614,7 +634,7 @@ function xuLyHienThiDULieu() {
 
     for (var index = 0; index < dataTrongNuoc.length; index++) {
         const itemTN = dataTrongNuoc[index];
-        
+
         var DaTaTN = `
                         <div class="col-30">
                             <div class="product-items">
@@ -633,7 +653,7 @@ function xuLyHienThiDULieu() {
                                     </div>
                                     <div class="startDay">
                                         <i class="far fa-clock"></i>
-                                        <span>${itemTN.startDay}</span>
+                                        <span>${itemTN.startDayList[0].startDay}</span>
                                     </div>
                                 </div>
                                 <div class="footer-product">
@@ -641,7 +661,7 @@ function xuLyHienThiDULieu() {
                                         <i class="fas fa-money-bill-alt"></i>
                                         <span>${itemTN.price}</span>
                                     </div>
-                                    <input class="btn" onclick="datNgayClick(${itemTN.id}, 2)" type="button" value="Đặt ngay" >
+                                    <input class="btn" onclick="datNgayClick(${itemTN.id}, 2, ${itemTN.startDayList[0].startDayId})" type="button" value="Đặt ngay" >
                                 </div>
                             </div>
                         </div> `
@@ -670,7 +690,7 @@ function xuLyHienThiDULieu() {
                                 </div>
                                 <div class="startDay">
                                     <i class="far fa-clock"></i>
-                                    <span>${itemNN.startDay}</span>
+                                    <span>${itemNN.startDayList[0].startDay}</span>
                                 </div>
                             </div>
                             <div class="footer-product">
@@ -678,18 +698,18 @@ function xuLyHienThiDULieu() {
                                     <i class="fas fa-money-bill-alt"></i>
                                     <span>${itemNN.price}</span>
                                 </div>
-                                <input class="btn" onclick="datNgayClick(${itemNN.id}, 3)" type="button" value="Đặt ngay" >
+                                <input class="btn" onclick="datNgayClick(${itemNN.id}, 3, ${itemNN.startDayList[0].startDayId})" type="button" value="Đặt ngay" >
                                 </div>
                         </div>
                     </div> `;
         tourNN = tourNN + DaTaNN;
     }
-    $("#SanPhamNuocNgoai").prepend(tourNN);   
+    $("#SanPhamNuocNgoai").prepend(tourNN);
 }
 
 
-        
-  
+
+
 
 // Phần xử lý js trượt về đầu trang
 function truotVeTrangDau() {
@@ -741,7 +761,7 @@ function langNgheHamClick() {
     })
 }
 
-function datNgayClick(id, loai) {
+function datNgayClick(id, loai, ngay) {
     // var item = $(this);
 
     // loai 1 => data
@@ -749,7 +769,7 @@ function datNgayClick(id, loai) {
     // loai 3 => ngoai nuoc
 
     // window.location.href = "/index-gioHang.html?id=" + id;
-    window.location.href = `/index-gioHang.html?id=${id}&loai=${loai}`;
+    window.location.href = `/index-gioHang.html?id=${id}&loai=${loai}&ngay=${ngay}`;
 }
 
 function chiTietClick(id, loai) {

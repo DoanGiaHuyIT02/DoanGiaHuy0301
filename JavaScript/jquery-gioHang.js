@@ -20,9 +20,11 @@ function layThongTinDuLich() {
 
     var id = params.id;
     var loai = params.loai;
+    var ngay = params.ngay;
+
     var idInt = parseInt(id);
     var loaiInt = parseInt(loai);
-
+    var ngayInt = parseInt(ngay);
    
 
     // data la kieu string
@@ -59,6 +61,8 @@ function layThongTinDuLich() {
 
     console.log(duLichItem);
 
+    // {startDayId: 2, startDay: "11/08/2022"},
+    var startDateItem = duLichItem.startDayList.find(x => x.startDayId === ngayInt); // [ {} {} {} ]
 
 
 // Phần thay đổi thông tin 
@@ -67,7 +71,8 @@ function layThongTinDuLich() {
     $("#NameTrip").text(duLichItem.title);
 
     // Thay đổi ngày tháng
-    $("#dateTrip").text(duLichItem.startDay);
+    //$("#dateTrip").text(duLichItem.startDay);
+    $("#dateTrip").text(startDateItem.startDay);
 
     // thay doi anhdai dien
     $("#anhDaiDien").attr("src",duLichItem.img);
@@ -81,6 +86,17 @@ function layThongTinDuLich() {
     })
 
     // Phần xử lý tính tiền
+}
+
+
+function tinhTienVaHienThiSoTien() {
+    var tongTien = tinhTien();
+
+    var tongTienHienThi = tongTien + " VND";
+
+    document.getElementById("total-item").innerHTML = tongTienHienThi;
+    document.getElementById("total").innerHTML = tongTienHienThi;
+    document.getElementById("total1").innerHTML = tongTienHienThi;
 }
 
 function tinhTien() {
@@ -173,11 +189,13 @@ function tinhTien() {
         tongCoCham = tongCoCham + so;
     }
 
-    var tongTienHienThi = tongCoCham + " VND";
+    return tongCoCham;
 
-    document.getElementById("total-item").innerHTML = tongTienHienThi;
-    document.getElementById("total").innerHTML = tongTienHienThi;
-    document.getElementById("total1").innerHTML = tongTienHienThi;
+    // var tongTienHienThi = tongCoCham + " VND";
+
+    // document.getElementById("total-item").innerHTML = tongTienHienThi;
+    // document.getElementById("total").innerHTML = tongTienHienThi;
+    // document.getElementById("total1").innerHTML = tongTienHienThi;
     
 }
 
@@ -186,7 +204,8 @@ function tinhTien() {
 
 $(document).ready(function() {
     layThongTinDuLich();
-    tinhTien();
+    // tinhTien();
+    tinhTienVaHienThiSoTien();
 })
 
 // Phần xử lý nhập thông tin đặt chuyến đi
@@ -350,6 +369,8 @@ $(document).ready(function() {
         var email = $("#email").val();
         var address = $("#address").val();
 
+        var tongTIen = tinhTien();
+
         if (fullName === " " || number === " " || email === "" || address === "") {
             alert('Vui lòng nhập thông tin đầy đủ');
         } else {
@@ -385,7 +406,7 @@ $(document).ready(function() {
                     </li>
                     <li>
                         Tổng tiền:
-                        <span>${price}</span>
+                        <span>${tongTIen} VND</span>
                     </li>
                     </ul>
                     <button class="submit-XacNhan" onclick="submitDatTour()">Xác Nhận</button>
@@ -402,12 +423,21 @@ $(document).ready(function() {
     
 })
 
-function submitDatTour() {
-    $("div.modal").remove();
-    alert('Đặt chuyến thành công')
+function clearModal(){
+    $("div.modal").hide();
+    $(".ThongTinKhachHang").remove();
 
+    // clear input
+    $("#fullName").val('');
+    $("#phoneNumber").val('');
+    $("#email").val('');
+    $("#address").val('');
+}
+
+function submitDatTour() {
+    clearModal();
 }
 
 function xoaBang() {
-    $("div.modal").remove();
+    clearModal();
 }
