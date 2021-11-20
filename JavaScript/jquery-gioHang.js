@@ -439,5 +439,6 @@ function submitDatTour() {
 }
 
 function xoaBang() {
-    clearModal();
+    $("div.modal").hide();
+    $(".ThongTinKhachHang").remove();
 }
