@@ -4,19 +4,6 @@ var versionHienTai = "4.13" //LƯU Ý: Khi đổi dữ liệu cần cập nhật
 // JavaScript xu ly du lieu
 // jQuery xu ly du lieu va xu ly UI HTML
 
-var datTour = [
-    {
-        tourId: 1,
-        startDateId: 137,
-        khachSanId: 2,
-        tonTien: '7.899.000',
-        hoTen: 'hoTen',
-        sdt: 'sdt',
-        diaChi: 'diaChi',
-        email: 'email',
-    }
-]
-
 
 var data = [
     {
@@ -584,15 +571,12 @@ function loadDataToLocalStore(id) {
 }
 
 function xuLyHienThiDULieu() {
-    var tourHTML = '';
+    var tourHot = '';
     var tourTN = '';
     var tourNN = '';
 
     for (var i = 0; i < data.length; i++) {
-        const item = data[i];
-
-        console.log("HOT");
-        console.log(item.startDayList);
+        var item = data[i];
 
         var dataHTML = `
                             <div class="col-30">
@@ -627,10 +611,10 @@ function xuLyHienThiDULieu() {
                                     </div>
                                 </div>
                             </div>`;
-        tourHTML = tourHTML + dataHTML;
+        tourHot = tourHot + dataHTML;
     }
 
-    $(`#SanPhamHOT-items`).prepend(tourHTML);
+    $(`#SanPhamHOT-items`).prepend(tourHot);
 
     for (var index = 0; index < dataTrongNuoc.length; index++) {
         const itemTN = dataTrongNuoc[index];

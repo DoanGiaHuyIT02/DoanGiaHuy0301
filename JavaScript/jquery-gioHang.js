@@ -16,8 +16,6 @@ function layThongTinDuLich() {
 // var newParam = { id: 1 };
 
 
-
-
     var id = params.id;
     var loai = params.loai;
     var ngay = params.ngay;
@@ -89,15 +87,7 @@ function layThongTinDuLich() {
 }
 
 
-function tinhTienVaHienThiSoTien() {
-    var tongTien = tinhTien();
 
-    var tongTienHienThi = tongTien + " VND";
-
-    document.getElementById("total-item").innerHTML = tongTienHienThi;
-    document.getElementById("total").innerHTML = tongTienHienThi;
-    document.getElementById("total1").innerHTML = tongTienHienThi;
-}
 
 function tinhTien() {
 
@@ -149,7 +139,7 @@ function tinhTien() {
         
     }
 
-    var priceNoVNDInt = parseInt(priceKhongCham); // parseFloat
+    var priceNoVNDInt = parseInt(priceKhongCham); 
     
 
 
@@ -167,9 +157,9 @@ function tinhTien() {
 
 
     // chay vong lap for 3 so cham 1 cai
-    for (let index = tongTinhToanString.length - 1; index >= 0; index--) {
+    for (var i = tongTinhToanString.length - 1; i >= 0; i--) {
         
-        var so = tongTinhToanString[index];
+        var so = tongTinhToanString[i];
 
         dem = dem + 1;
         if(dem === 3){
@@ -184,8 +174,8 @@ function tinhTien() {
 
     var tongCoCham = '';
 
-    for (let index = tongCoChamNguoc.length - 1; index >= 0; index--) {
-        var so = tongCoChamNguoc[index];
+    for (var i = tongCoChamNguoc.length - 1; i >= 0; i--) {
+        var so = tongCoChamNguoc[i];
         tongCoCham = tongCoCham + so;
     }
 
@@ -196,7 +186,16 @@ function tinhTien() {
     // document.getElementById("total-item").innerHTML = tongTienHienThi;
     // document.getElementById("total").innerHTML = tongTienHienThi;
     // document.getElementById("total1").innerHTML = tongTienHienThi;
-    
+}
+
+function tinhTienVaHienThiSoTien() {
+    var tongTien = tinhTien();
+
+    var tongTienHienThi = tongTien + " VND";
+
+    document.getElementById("total-item").innerHTML = tongTienHienThi;
+    document.getElementById("total").innerHTML = tongTienHienThi;
+    document.getElementById("total1").innerHTML = tongTienHienThi;
 }
 
 
@@ -204,7 +203,6 @@ function tinhTien() {
 
 $(document).ready(function() {
     layThongTinDuLich();
-    // tinhTien();
     tinhTienVaHienThiSoTien();
 })
 
@@ -436,6 +434,13 @@ function clearModal(){
 
 function submitDatTour() {
     clearModal();
+    var confirmBtn = confirm('Bạn chắc là muốn đặt chuyến chứ!!!!')
+    if (confirmBtn == true) {
+        alert('Bạn đã đặt tour thành công ^_^')
+    } else {
+        clearModal();
+    }
+    
 }
 
 function xoaBang() {
