@@ -753,11 +753,11 @@ function datNgayClick(id, loai, ngay) {
     // loai 3 => ngoai nuoc
 
     // window.location.href = "/index-gioHang.html?id=" + id;
-    window.location.href = `DoanGiaHuy0301/index-gioHang.html?id=${id}&loai=${loai}&ngay=${ngay}`;
+    window.location.href = `/index-gioHang.html?id=${id}&loai=${loai}&ngay=${ngay}`;
 }
 
 function chiTietClick(id, loai) {
-    window.location.href = `DoanGiaHuy0301/index-ChiTietChuyenDi.html?id=${id}&loai=${loai}`;
+    window.location.href = `/index-ChiTietChuyenDi.html?id=${id}&loai=${loai}`;
 }
 
 
