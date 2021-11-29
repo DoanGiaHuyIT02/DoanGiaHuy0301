@@ -417,9 +417,15 @@ $(document).ready(function() {
             `)
         }  
     })
-
-    
 })
+
+$(document).ready(function() {
+    $("#PageSubmit").click(function() {
+        xoaBang();
+    })
+});
+
+
 
 function clearModal(){
     $("div.modal").hide();
