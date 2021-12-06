@@ -159,8 +159,6 @@ function datNgayChiTietClick() {
     var loai = params.loai;
     // lay id
     // lay loai
-    console.log(id);
-    console.log(loai);
 
     var duLichItem = data.find(d => d.id === idInt);
 
