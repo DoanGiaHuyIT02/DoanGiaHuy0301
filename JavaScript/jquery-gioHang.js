@@ -1,16 +1,11 @@
 function layThongTinDuLich() {
 
     // lay id tren query string
-
-     
     // lay query string tu url
     var urlSearchParams = new URLSearchParams(window.location.search);
     var params = Object.fromEntries(urlSearchParams.entries());
 
     // END lay query string tu url
-
-
-     // params[ daSplit[0] ] = daSplit[1]   ~ params[ "id" ] = 1
 
 
 // var newParam = { id: 1 };
@@ -33,19 +28,16 @@ function layThongTinDuLich() {
 
     if(loaiInt === 1)
     {
-        console.log("dataStored");
         dataString = localStorage.getItem("dataStored");
     }
 
     if(loaiInt === 2)
     {
-        console.log("dataTN");
         dataString = localStorage.getItem("dataTN");
     }
 
     if(loaiInt === 3)
     {
-        console.log("dataNN");
         dataString = localStorage.getItem("dataNN");
     }
 
