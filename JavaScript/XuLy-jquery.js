@@ -719,17 +719,17 @@ function truotDenCacSection() {
 
     $("#TOURHOT").click(function () {
         $("html, body").animate({
-            scrollTop: 1250
+            scrollTop: 1190
         }, 1000)
     })
     $("#TOURTrongNuoc").click(function () {
         $("html, body").animate({
-            scrollTop: 2480
+            scrollTop: 2284
         }, 1000)
     })
     $("#TOURNuocNgoai").click(function () {
         $("html, body").animate({
-            scrollTop: 3700
+            scrollTop: 3490
         }, 1000)
     })
 }
