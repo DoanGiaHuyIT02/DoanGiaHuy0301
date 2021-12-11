@@ -737,11 +737,9 @@ function truotDenCacSection() {
 // Phần bấm nút đặt ngay
 function langNgheHamClick() {
     $(document).on("click", ".btn", function (e) {
-
     })
 
     $(document).on("click", ".titleClick", function (e) {
-
     })
 }
 
@@ -766,7 +764,6 @@ function chiTietClick(id, loai) {
 
 
 $(document).ready(function () {
-
     truotVeTrangDau();
     truotDenCacSection();
     loadDataToLocalStore();
