@@ -613,7 +613,6 @@ function xuLyHienThiDULieu() {
                             </div>`;
         tourHot = tourHot + dataHTML;
     }
-
     $(`#SanPhamHOT-items`).prepend(tourHot);
 
     for (var index = 0; index < dataTrongNuoc.length; index++) {

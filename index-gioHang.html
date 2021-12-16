@@ -432,12 +432,14 @@
     <script src="JavaScript/index.js"></script>
    <script src="JavaScript/jquery-gioHang.js"></script>
    <script>
+    // Tạo một đối tượng để xử lý riêng cho form
+    // .isRequired là hàm bắt buộc
     Validator({
         // đặt phần form của mình
         form: '#form-1', 
         formgroup: '.formInfo',
         // Đặt phần lỗi
-
+        // Tạo một mảng chứa các hàm
         rules: [
             Validator.isRequired('#fullName'),
             Validator.isRequired('#phoneNumber'),

@@ -241,8 +241,6 @@ function Validator(options) {
                 selectorRules[rule.selector] = [rule.test];
             }
             
-
-
             // Lấy được giá trị người dùng nhập vào qua inputElement.value
             var inputElement = formElement.querySelector(rule.selector);
             var errorSpan = inputElement.parentElement.querySelector(options.errorSelector);
